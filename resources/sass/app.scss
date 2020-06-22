@@ -1,0 +1,18 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import './layout';
+
+.filtered {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.navbar-light .navbar-nav .nav-link {
+    font-size: 18px !important;
+    color: white;
+}
