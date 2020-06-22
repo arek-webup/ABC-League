@@ -19,7 +19,7 @@ class StripeGateway
     public function stripePost(Request $request, PaymentGateway $pG)
     {
 
-        Stripe::setApiKey('sk_live_TqQ81eH9fDYIJdCq9y3BLEKu00NSWw5FdP');
+        Stripe::setApiKey('');
         try {
             Charge::create(array(
                 "amount" => $pG->getPrice() * 100,
