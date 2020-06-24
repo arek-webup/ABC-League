@@ -12,16 +12,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'HomeController@index');
-Route::get('/accounts', 'ApiController@accounts');
-Route::get('/accounts/{id}', 'ApiController@acc');
-Route::get('/accounts/region/{id}', 'ApiController@accfromregion');
-Route::get('/regions', 'ApiController@regions');
-Route::get('/reviews', 'ApiController@reviews');
+Route::middleware('cors')->group(function () {
+    Route::get('/', 'HomeController@index');
+    Route::get('/accounts', 'ApiController@accounts');
+    Route::get('/accounts/{id}', 'ApiController@acc');
+    Route::get('/accounts/region/{id}', 'ApiController@accfromregion');
+    Route::get('/regions', 'ApiController@regions');
+    Route::get('/reviews', 'ApiController@reviews');
 
-Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
-Route::get('/countrycode', 'ApiController@getCountryCode');
-
+    Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
+    Route::get('/countrycode', 'ApiController@getCountryCode');
+});
 
 //
 //Route::get('/pay_stripe', 'PaymentController@pay_stripe');
