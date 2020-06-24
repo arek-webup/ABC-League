@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'HomeController@index');
-//Route::get('/accounts', 'ApiController@accounts');
-//Route::get('/regions', 'ApiController@regions');
-//Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
-//Route::get('/countrycode', 'ApiController@getCountryCode');
-//Route::get('/accounts/{id}', 'ApiController@availableaccounts');
-//
+Route::get('/accounts', 'ApiController@accounts');
+Route::get('/regions', 'ApiController@regions');
+Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
+Route::get('/countrycode', 'ApiController@getCountryCode');
+Route::get('/accounts/{id}', 'ApiController@availableaccounts');
+
 //
 //Route::get('/pay_stripe', 'PaymentController@pay_stripe');
 //Route::post('/pay_paypal', 'PaymentController@pay_paypal')->name('charge');
