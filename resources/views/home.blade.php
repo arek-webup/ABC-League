@@ -87,7 +87,7 @@
                                 </div></blockquote>
                             <p>GET /reviews </p>
                             <blockquote class="epigraph">
-                                <div><p>Zwraca regiony</p>
+                                <div><p>Zwraca opinie</p>
                                 </div></blockquote>
                             <p>GET /getCountryCode </p>
                             <blockquote class="epigraph">
