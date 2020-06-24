@@ -34,7 +34,7 @@ class ApiController extends Controller
 
     public function accounts()
     {
-        return response()->$this->aR->getAllAccounts();
+        return response()->json($this->aR->getAllAccounts());
     }
 
     public function acc($id)
