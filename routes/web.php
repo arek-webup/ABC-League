@@ -13,17 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/accounts', 'ApiController@accounts');
-Route::get('/regions', 'ApiController@regions');
-Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
-Route::get('/countrycode', 'ApiController@getCountryCode');
-
-
-
-Route::get('/pay_stripe', 'PaymentController@pay_stripe');
-Route::post('/pay_paypal', 'PaymentController@pay_paypal')->name('charge');
-Route::get('paymentsuccess', 'PaymentController@payment_success');
-Route::get('paymenterror', 'PaymentController@payment_error');
+//Route::get('/accounts', 'ApiController@accounts');
+//Route::get('/regions', 'ApiController@regions');
+//Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
+//Route::get('/countrycode', 'ApiController@getCountryCode');
+//
+//
+//
+//Route::get('/pay_stripe', 'PaymentController@pay_stripe');
+//Route::post('/pay_paypal', 'PaymentController@pay_paypal')->name('charge');
+//Route::get('paymentsuccess', 'PaymentController@payment_success');
+//Route::get('paymenterror', 'PaymentController@payment_error');
 
 Auth::routes();
 
