@@ -47,15 +47,42 @@ class ApiController extends Controller
         return $this->aR->getAvailableAccount($id);
     }
 
+    public function available_acc()
+    {
+        return $this->aR->getAvailableAccounts();
+    }
+
+    public function available_accfromregion($id)
+    {
+        return $this->aR->getAvailableAccount($id);
+    }
+
+
+
     public function reviews()
     {
         return $this->reviewsRepository->getReviews();
     }
 
+
+
     public function regions()
     {
         return $this->rR->getAllRegions();
     }
+
+    public function getregion($id)
+    {
+        return $this->rR->getRegion($id);
+    }
+
+    public function available_regions()
+    {
+        return $this->rR->getAvailableRegions();
+    }
+
+
+
 
     public function covert($price, $curr, $curr_sec)
     {

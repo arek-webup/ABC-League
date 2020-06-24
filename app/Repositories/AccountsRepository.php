@@ -19,6 +19,13 @@ class AccountsRepository
         return Account::where('quantity','>=', '1')->get();
     }
 
+    public function getAvailableAccounts()
+    {
+        return Account::with(['regions'])
+            ->where('quantity','>=',1)
+            ->orderBy('id', 'asc')
+            ->get();
+    }
     public function getAvailableAccount($id)
     {
         return Account::with(['regions'])

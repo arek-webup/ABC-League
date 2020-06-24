@@ -67,8 +67,8 @@
                 <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                     <div itemprop="articleBody">
                         <div class="section" id="preface-to-the-api-design-guide">
-                            <h1>Tu będzie jakaś dokumentacja kiedyś<a class="headerlink" href="#preface-to-the-api-design-guide" title="Permalink to this headline">¶</a></h1>
-                            <p><strong>Linki</strong>.</p>
+                            <h1>Metody GET - sprawy ogólne<a class="headerlink" href="#preface-to-the-api-design-guide" title="Permalink to this headline">¶</a></h1>
+                            <p><strong>Konta</strong>.</p>
                             <p>GET /accounts </p>
                             <blockquote class="epigraph">
                                 <div><p>Zwraca konta</p>
@@ -81,15 +81,41 @@
                             <blockquote class="epigraph">
                                 <div><p>Zwraca konta o danym id np. 81</p>
                                 </div></blockquote>
+
+
+
+                            <p><strong>Konta aktywne (nie są out of stock, zawierają loginy i hasła)</strong>.</p>
+                            <p>GET /available/accounts </p>
+                            <blockquote class="epigraph">
+                                <div><p>Zwraca konta które są do kupienia (tymczasowo zbugowane, naprawie to niedługo)</p>
+                                </div></blockquote>
+                            <p>GET /available/accounts/region/{id] </p>
+                            <blockquote class="epigraph">
+                                <div><p>Zwraca konta z regionu o danym id które są do kupienia (tymczasowo zbugowane, naprawie to niedługo)</p>
+                                </div></blockquote>
+
+
+                            <p><strong>Regiony</strong>.</p>
                             <p>GET /regions </p>
                             <blockquote class="epigraph">
                                 <div><p>Zwraca regiony</p>
                                 </div></blockquote>
+                            <p>GET /region/{id} </p>
+                            <blockquote class="epigraph">
+                                <div><p>Zwraca informacje o regionie</p>
+                                </div></blockquote>
+                            <p>GET /available/regions </p>
+                            <blockquote class="epigraph">
+                                <div><p>Zwraca regiony w których konta nie są outofstock</p>
+                                </div></blockquote>
+
+                            <p><strong>Opinie</strong>.</p>
                             <p>GET /reviews </p>
                             <blockquote class="epigraph">
                                 <div><p>Zwraca opinie</p>
                                 </div></blockquote>
-                            <p>GET /getCountryCode </p>
+                            <p><strong>Pomocnicze</strong>.</p>
+                            <p>GET /countrycode </p>
                             <blockquote class="epigraph">
                                 <div><p>zwraca adres użytkownika po adresie IP</p>
                                 </div></blockquote>
@@ -97,6 +123,15 @@
                             <blockquote class="epigraph">
                                 <div>
                                     <p>price: cena obecna, curr: cena z jakiej konwertujesz, curr_sec: cena na jaką konwertujesz</p>
+                                </div></blockquote>
+
+
+                            <h1>Płatności<a class="headerlink" href="#preface-to-the-api-design-guide" title="Permalink to this headline">¶</a></h1>
+                            <p>POST /pay_paypal </p>
+                            <blockquote class="epigraph">
+                                <div>
+                                    <p>Dane do wysłania: email, currency, price, quantity, description</p>
+                                    <p>Dane powrotne: sam zobaczysz, jakby czegoś brakowało to wywali error code 500 albo empty </p>
                                 </div></blockquote>
                         </div>
                     </div>

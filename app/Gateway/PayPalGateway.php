@@ -32,7 +32,7 @@ class PayPalGateway
                 ))->send();
 
                 if ($response->isRedirect()) {
-                    $response->redirect(); // this will automatically forward the customer
+                    return $response->redirect(); // this will automatically forward the customer
                 } else {
                     // not successful
                     return $response->getMessage();
