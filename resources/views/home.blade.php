@@ -73,11 +73,19 @@
                             <blockquote class="epigraph">
                                 <div><p>Zwraca konta</p>
                                 </div></blockquote>
+                            <p>GET /accounts/region/{id] </p>
+                            <blockquote class="epigraph">
+                                <div><p>Zwraca konta z regionu o danym id</p>
+                                </div></blockquote>
                             <p>GET /accounts/{id] </p>
                             <blockquote class="epigraph">
-                                <div><p>Zwraca konta z danego regionu</p>
+                                <div><p>Zwraca konta o danym id np. 81</p>
                                 </div></blockquote>
                             <p>GET /regions </p>
+                            <blockquote class="epigraph">
+                                <div><p>Zwraca regiony</p>
+                                </div></blockquote>
+                            <p>GET /reviews </p>
                             <blockquote class="epigraph">
                                 <div><p>Zwraca regiony</p>
                                 </div></blockquote>
