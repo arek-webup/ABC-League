@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 Route::middleware('cors')->group(function () {
     Route::get('/', 'HomeController@index');
     Route::get('/accounts', 'ApiController@accounts');
@@ -39,6 +40,7 @@ Route::middleware('cors')->group(function () {
     Route::get('paymentsuccess', 'PaymentController@payment_success');
     Route::get('paymenterror', 'PaymentController@payment_error');
 });
+
 
 
 

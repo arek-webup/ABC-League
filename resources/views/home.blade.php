@@ -84,7 +84,7 @@
 
 
 
-                            <p><strong>Konta aktywne (nie są out of stock, zawierają loginy i hasła)</strong>.</p>
+                            <p><strong>Konta aktywne (nie są out of stock, nie zawierają loginów i haseł)</strong>.</p>
                             <p>GET /available/accounts </p>
                             <blockquote class="epigraph">
                                 <div><p>Zwraca konta które są do kupienia (tymczasowo zbugowane, naprawie to niedługo)</p>
