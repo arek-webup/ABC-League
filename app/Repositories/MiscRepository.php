@@ -9,16 +9,19 @@ use http\Exception;
 
 class MiscRepository
 {
+    public function roundUp($number, $nearest){
+        return $number + ($nearest - fmod($number, $nearest));
+    }
 
-    public function convertToPLN($price, $currency){
+    public function convertToPLN($price, $curr, $curr_sec){
         //$currency = USD / $currency = EUR itd...
-        $req_url = 'https://api.exchangerate-api.com/v4/latest/'.$currency.'';
+        $req_url = 'https://api.exchangerate-api.com/v4/latest/'.$curr.'';
         $response_json = file_get_contents($req_url);
         if(false !== $response_json) {
             try {
                 $response_object = json_decode($response_json);
                 $base_price = $price; // Your price in USD
-                return round(($base_price * $response_object->rates->PLN), 2);
+                return round(($base_price * $response_object->rates->$curr_sec), 2);
             }
             catch(Exception $e) {
                 // Handle JSON parse error...

@@ -8,20 +8,15 @@ use App\Account;
 
 class AccountsRepository
 {
-    public static function getSorted($id)
-    {
-        return Account::where('region_id',  $id)->orderBy('order', 'asc')->get();
-    }
-
 
     public function getAllAccounts()
     {
-        return Accounts::all();
+        return Account::all();
     }
 
     public function getAllAvailableAccounts()
     {
-        return Accounts::where('quantity','>=', '1')->get();
+        return Account::where('quantity','>=', '1')->get();
     }
 
     public function getAvailableAccount($id)

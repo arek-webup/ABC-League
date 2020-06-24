@@ -90,4 +90,9 @@ class PaymentGateway
     {
         return $this->lastname;
     }
+
+    public function getAll()
+    {
+        return [$this->description, $this->currency, $this->email, $this->quantity];
+    }
 }

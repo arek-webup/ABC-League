@@ -16,6 +16,11 @@ use Stripe\Stripe;
 class StripeGateway
 {
 
+    public function showForm(PaymentGateway $pg)
+    {
+        return $pg->getAll();
+    }
+
     public function stripePost(Request $request, PaymentGateway $pG)
     {
 

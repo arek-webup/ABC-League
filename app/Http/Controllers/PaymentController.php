@@ -33,7 +33,7 @@ class PaymentController extends Controller
         $this->pG->setPrice($request->price);
         $this->pG->setQuantity($request->quantity);
         $this->pG->setDescription($request->description);
-        $this->sG->stripePost($this->pG);
+        $this->sG->showForm($this->pG);
     }
 
     public function payment_success(Request $request)
