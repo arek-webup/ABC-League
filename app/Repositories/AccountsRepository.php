@@ -24,7 +24,7 @@ class AccountsRepository
         return Account::with(['regions'])
             ->where('region_id',$id)
             ->where('quantity','>=',1)
-            ->orderBy('order', 'asc')
+            ->orderBy('id', 'asc')
             ->get();
     }
 
