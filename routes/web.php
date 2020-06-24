@@ -12,12 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', 'HomeController@index');
 //Route::get('/accounts', 'ApiController@accounts');
 //Route::get('/regions', 'ApiController@regions');
 //Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
 //Route::get('/countrycode', 'ApiController@getCountryCode');
-//
+//Route::get('/accounts/{id}', 'ApiController@availableaccounts');
 //
 //
 //Route::get('/pay_stripe', 'PaymentController@pay_stripe');

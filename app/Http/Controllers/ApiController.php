@@ -35,6 +35,11 @@ class ApiController extends Controller
         return $this->aR->getAllAccounts();
     }
 
+    public function availableaccounts($id)
+    {
+        return $this->aR->getAvailableAccount($id);
+    }
+
     public function regions()
     {
         return $this->rR->getAllRegions();

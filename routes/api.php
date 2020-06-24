@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/accounts', 'ApiController@accounts');
+Route::get('/accounts/{id}', 'ApiController@availableaccounts');
 Route::get('/regions', 'ApiController@regions');
 Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
 Route::get('/countrycode', 'ApiController@getCountryCode');
