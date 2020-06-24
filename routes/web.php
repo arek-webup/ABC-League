@@ -14,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', 'HomeController@index');
 Route::get('/accounts', 'ApiController@accounts');
+Route::get('/accounts/{id}', 'ApiController@acc');
+Route::get('/accounts/region/{id}', 'ApiController@accfromregion');
 Route::get('/regions', 'ApiController@regions');
+Route::get('/reviews', 'ApiController@reviews');
+
 Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
 Route::get('/countrycode', 'ApiController@getCountryCode');
-Route::get('/accounts/{id}', 'ApiController@acc');
+
 
 //
 //Route::get('/pay_stripe', 'PaymentController@pay_stripe');

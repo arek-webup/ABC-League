@@ -6,6 +6,7 @@ use App\Account;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Misc;
 use App\Region;
+use App\Repositories\ReviewsRepository;
 use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -20,11 +21,12 @@ use App\Gateway\StripeGateway;
 
 class ApiController extends Controller
 {
-    public function __construct(AccountsRepository $aR, MiscRepository $mR, RegionsRepository $rR, PaymentGateway $paymentGateway, PayPalGateway $payPalGateway, StripeGateway $stripeGateway)
+    public function __construct(ReviewsRepository $reviewsRepository, AccountsRepository $aR, MiscRepository $mR, RegionsRepository $rR, PaymentGateway $paymentGateway, PayPalGateway $payPalGateway, StripeGateway $stripeGateway)
     {
         $this->aR = $aR;
         $this->mR = $mR;
         $this->rR = $rR;
+        $this->reviewsRepository = $reviewsRepository;
         $this->paymentGateway = $paymentGateway;
         $this->paypalGateway = $payPalGateway;
         $this->stripeGateway = $stripeGateway;
@@ -32,12 +34,22 @@ class ApiController extends Controller
 
     public function accounts()
     {
-        return $this->aR->getAllAccounts();
+        return response()->$this->aR->getAllAccounts();
     }
 
     public function acc($id)
     {
+        return $this->aR->getAccount($id);
+    }
+
+    public function accfromregion($id)
+    {
         return $this->aR->getAvailableAccount($id);
+    }
+
+    public function reviews()
+    {
+        return $this->reviewsRepository->getReviews();
     }
 
     public function regions()

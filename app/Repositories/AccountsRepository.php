@@ -30,9 +30,7 @@ class AccountsRepository
 
     public function getAccount($id)
     {
-        return Account::with(['regions'])
-            ->where('region_id',$id)
-            ->get();
+        return Account::findOrFail($id);
     }
 
     public function getAccountsCount($id)
