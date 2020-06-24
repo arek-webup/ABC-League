@@ -33,7 +33,7 @@ class MiscRepository
         }
     }
 
-    public function getCountryCode()
+    public function getCurrency()
     {
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
             //ip from share internet
@@ -44,9 +44,10 @@ class MiscRepository
         }else{
             $ip = $_SERVER['REMOTE_ADDR'];
         }
+
         $xml = simplexml_load_file("http://www.geoplugin.net/xml.gp?ip=".$ip);
 
-        return $xml->geoplugin_countryName;
+        return $xml->geoplugin_currencyCode;
 
     }
 

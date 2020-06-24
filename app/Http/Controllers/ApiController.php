@@ -89,9 +89,9 @@ class ApiController extends Controller
         return $this->mR->convertToPLN($price, $curr, $curr_sec);
     }
 
-    public function getCountryCode()
+    public function getCurrency()
     {
-        return $this->mR->getCountryCode();
+        return $this->mR->getCurrency();
     }
 
 }

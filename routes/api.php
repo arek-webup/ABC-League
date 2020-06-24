@@ -34,7 +34,7 @@ Route::middleware('cors')->group(function () {
     Route::get('/reviews', 'ApiController@reviews');
 
     Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
-    Route::get('/countrycode', 'ApiController@getCountryCode');
+    Route::get('/currency', 'ApiController@getCurrency');
     Route::get('/pay_stripe', 'PaymentController@pay_stripe');
     Route::post('/pay_paypal', 'PaymentController@pay_paypal')->name('charge');
     Route::get('paymentsuccess', 'PaymentController@payment_success');

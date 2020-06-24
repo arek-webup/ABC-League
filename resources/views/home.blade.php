@@ -115,9 +115,9 @@
                                 <div><p>Zwraca opinie</p>
                                 </div></blockquote>
                             <p><strong>Pomocnicze</strong>.</p>
-                            <p>GET /countrycode </p>
+                            <p>GET /currency </p>
                             <blockquote class="epigraph">
-                                <div><p>zwraca adres użytkownika po adresie IP</p>
+                                <div><p>zwraca walute w zależności od tego w jakim kraju jesteś (działa na większość dużych krajów)</p>
                                 </div></blockquote>
                             <p>GET /convert/{price}/{curr}/{curr_sec} </p>
                             <blockquote class="epigraph">
