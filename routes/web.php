@@ -26,6 +26,7 @@ Route::middleware('cors')->group(function () {
     Route::get('/availableregions', 'ApiController@available_regions');
 
     Route::get('/reviews', 'ApiController@reviews');
+    Route::post('/reviews/add', 'ApiController@add_review');
 
     Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
     Route::get('/currency', 'ApiController@getCurrency');

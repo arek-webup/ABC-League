@@ -13,4 +13,10 @@ class ReviewsRepository
     {
         return Review::all();
     }
+
+    public function insert_review($tekst, $author, $stars)
+    {
+        Review::insert(
+            ['tekst' => $tekst, 'author' => $author, 'stars' => $stars]);
+    }
 }

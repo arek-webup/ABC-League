@@ -114,6 +114,11 @@
                             <blockquote class="epigraph">
                                 <div><p>Zwraca opinie</p>
                                 </div></blockquote>
+                            <p>POST /reviews/add </p>
+                            <blockquote class="epigraph">
+                                <div><p>Dodawanie opinii - postujesz: "</p>
+                                </div></blockquote>
+
                             <p><strong>Pomocnicze</strong>.</p>
                             <p>GET /currency </p>
                             <blockquote class="epigraph">

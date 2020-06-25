@@ -22,4 +22,5 @@ class RegionsRepository
     {
         return Region::all();
     }
+
 }

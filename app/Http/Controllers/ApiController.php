@@ -64,6 +64,13 @@ class ApiController extends Controller
         return $this->reviewsRepository->getReviews();
     }
 
+    public function add_review(Request $request)
+    {
+        $this->reviewsRepository->insert_review($request->tekst, $request->author, $request->stars);
+        return response()->json('success');
+    }
+
+
 
 
     public function regions()
