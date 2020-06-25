@@ -116,7 +116,7 @@
                                 </div></blockquote>
                             <p>POST /reviews/add </p>
                             <blockquote class="epigraph">
-                                <div><p>Dodawanie opinii - postujesz: "</p>
+                                <div><p>Dodawanie opinii - postujesz: "tekst", "author", "stars"</p>
                                 </div></blockquote>
 
                             <p><strong>Pomocnicze</strong>.</p>
