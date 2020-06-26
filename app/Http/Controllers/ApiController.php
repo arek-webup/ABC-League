@@ -85,7 +85,7 @@ class ApiController extends Controller
 
     public function available_regions()
     {
-        return $this->rR->getAvailableRegions();
+        return response()->json($this->rR->getAvailableRegions());
     }
 
 
