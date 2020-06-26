@@ -79,16 +79,9 @@
                                 </div></blockquote>
                             <p>GET /accounts/{id] </p>
                             <blockquote class="epigraph">
-                                <div><p>Zwraca konta o danym id np. 81</p>
+                                <div><p>Zwraca konta o danym id np. 50 oraz ILOŚć kodów</p>
                                 </div></blockquote>
 
-
-
-                            <p><strong>Konta aktywne (nie są out of stock, nie zawierają loginów i haseł)</strong>.</p>
-                            <p>GET /available/accounts/{id} </p>
-                            <blockquote class="epigraph">
-                                <div><p>Zwraca ilość kont dla konta o danym id.</p>
-                                </div></blockquote>
 
 
 

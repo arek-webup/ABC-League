@@ -15,4 +15,14 @@ class Account extends Model
     {
         return $this->hasOne('App\Region');
     }
+
+    public function codes()
+    {
+        return $this->belongsTo('App\Code');
+    }
+
+    public function code()
+    {
+        return $this->hasOne('App\Code');
+    }
 }

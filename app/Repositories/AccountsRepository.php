@@ -5,6 +5,7 @@ namespace App\Repositories;
 
 
 use App\Account;
+use App\Code;
 
 class AccountsRepository
 {
@@ -37,7 +38,7 @@ class AccountsRepository
 
     public function getAccount($id)
     {
-        return Account::findOrFail($id);
+        return ['acc' => Account::findOrFail($id), 'count' => Code::where('account_id',$id)->count()];
     }
 
     public function getAccountsCount($id)
