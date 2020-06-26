@@ -85,14 +85,11 @@
 
 
                             <p><strong>Konta aktywne (nie są out of stock, nie zawierają loginów i haseł)</strong>.</p>
-                            <p>GET /available/accounts </p>
+                            <p>GET /available/accounts/{id} </p>
                             <blockquote class="epigraph">
-                                <div><p>Zwraca konta które są do kupienia (tymczasowo zbugowane, naprawie to niedługo)</p>
+                                <div><p>Zwraca ilość kont dla konta o danym id.</p>
                                 </div></blockquote>
-                            <p>GET /available/accounts/region/{id] </p>
-                            <blockquote class="epigraph">
-                                <div><p>Zwraca konta z regionu o danym id które są do kupienia (tymczasowo zbugowane, naprawie to niedługo)</p>
-                                </div></blockquote>
+
 
 
                             <p><strong>Regiony</strong>.</p>

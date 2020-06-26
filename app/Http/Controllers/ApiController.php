@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Account;
+use App\Code;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Misc;
 use App\Region;
@@ -83,13 +84,12 @@ class ApiController extends Controller
         return $this->rR->getRegion($id);
     }
 
-    public function available_regions()
+
+
+    public  function getAccountsCount($id)
     {
-        return response()->json( $this->rR->getAvailableRegions());
+        Return Code::where('account_id',$id)->count();
     }
-
-
-
 
     public function covert($price, $curr, $curr_sec)
     {

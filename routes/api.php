@@ -23,9 +23,10 @@ Route::middleware('cors')->group(function () {
     Route::get('/accounts', 'ApiController@accounts');
     Route::get('/accounts/{id}', 'ApiController@acc');
     Route::get('/accounts/region/{id}', 'ApiController@accfromregion');
+    Route::get('/available/accounts/{id}', 'ApiController@getAccountsCount');
 
     Route::get('/available/accounts', 'ApiController@available_acc');
-    Route::get('/available/accounts/region/{id}', 'ApiController@available_accfromregion');
+//    Route::get('/available/accounts/region/{id}', 'ApiController@available_accfromregion');
 
     Route::get('/regions', 'ApiController@regions');
     Route::get('/region/{id}', 'ApiController@getregion');
