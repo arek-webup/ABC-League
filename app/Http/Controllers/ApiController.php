@@ -85,7 +85,7 @@ class ApiController extends Controller
 
     public function available_regions()
     {
-        return response()->json($this->rR->getAvailableRegions());
+        return response()->json( $this->rR->getAvailableRegions());
     }
 
 
@@ -98,7 +98,7 @@ class ApiController extends Controller
 
     public function getCurrency()
     {
-        return $this->mR->getCurrency();
+        return response()->json( $this->mR->getCurrency());
     }
 
 }
