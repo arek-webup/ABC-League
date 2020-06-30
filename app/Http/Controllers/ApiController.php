@@ -45,7 +45,17 @@ class ApiController extends Controller
 
     public function accfromregion($id)
     {
-        return $this->aR->getAvailableAccount($id);
+//        return $this->aR->getAvailableAccount($id);
+        $acc = Account::where('region_id', $id)->get();
+        //Przypisuje se konta do zmiennej $acc
+
+
+        for($i = 0; $i<$acc->count();$i++)
+        {
+            $count[$i] = Code::where('account_id',$acc[$i]->id)->count();
+            //ma mi pokazać ilość Codes dla każdego konta
+        }
+        return ['acc' => $acc, 'count' => $count];
     }
 
     public function available_acc()
