@@ -47,8 +47,9 @@ class ApiController extends Controller
     {
 //        return $this->aR->getAvailableAccount($id);
         $acc = Account::where('region_id', $id)->get();
-        //Przypisuje se konta do zmiennej $acc
-
+//
+//        //Przypisuje se konta do zmiennej $acc
+//        return $acc;
 
         for($i = 0; $i<$acc->count();$i++)
         {
