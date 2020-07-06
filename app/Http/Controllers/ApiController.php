@@ -22,6 +22,11 @@ use App\Gateway\StripeGateway;
 
 class ApiController extends Controller
 {
+    /**
+     * @var ReviewsRepository
+     */
+    private $reviewsRepository;
+
     public function __construct(ReviewsRepository $reviewsRepository, AccountsRepository $aR, MiscRepository $mR, RegionsRepository $rR, PaymentGateway $paymentGateway, PayPalGateway $payPalGateway, StripeGateway $stripeGateway)
     {
         $this->aR = $aR;
@@ -76,9 +81,9 @@ class ApiController extends Controller
         return $this->reviewsRepository->getReviews();
     }
 
-    public function add_review(Request $request)
+    public function add_review($tekst, $author, $stars)
     {
-        $this->reviewsRepository->insert_review($request->tekst, $request->author, $request->stars);
+        $this->reviewsRepository->insert_review($tekst, $author, $stars);
         return response()->json('success');
     }
 
