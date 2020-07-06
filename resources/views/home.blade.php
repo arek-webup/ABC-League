@@ -104,7 +104,7 @@
                             <blockquote class="epigraph">
                                 <div><p>Zwraca opinie</p>
                                 </div></blockquote>
-                            <p>POST /reviews/add </p>
+                            <p>GET /reviews/add/{tekst}/{author}/{stars} </p>
                             <blockquote class="epigraph">
                                 <div><p>Dodawanie opinii - postujesz: "tekst", "author", "stars"</p>
                                 </div></blockquote>
