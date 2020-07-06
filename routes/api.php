@@ -20,8 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group([
 
-    'middleware' => ['api'],
-    'prefix' => 'auth'
+    'middleware' => ['cors'],
 
 ], function () {
 
@@ -38,7 +37,7 @@ Route::group([
     Route::get('/availableregions', 'ApiController@available_regions');
 
     Route::get('/reviews', 'ApiController@reviews');
-    Route::get('/reviews/add/{tekst}/{author}/{start}', 'ApiController@add_review');
+    Route::get('/reviews/add/{tekst}/{author}/{stars}', 'ApiController@add_review');
 
     Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
     Route::get('/currency', 'ApiController@getCurrency');
