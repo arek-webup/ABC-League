@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55b35484-38d1-4fd3-93f3-b18abcceb981" name="Default Changelist" comment="Hello świat">
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Gateway/PayPalGateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gateway/PayPalGateway.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +209,7 @@
       <workItem from="1593195183038" duration="1605000" />
       <workItem from="1593526721539" duration="3948000" />
       <workItem from="1593792274272" duration="274000" />
-      <workItem from="1594056419441" duration="1741000" />
+      <workItem from="1594056419441" duration="2103000" />
     </task>
     <task id="LOCAL-00001" summary="Hello świat">
       <created>1592829785250</created>
@@ -493,6 +495,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="178" key="#Inspections/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1592828890043" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594059136398">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594059136398" />
     <state x="547" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592918447576">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
