@@ -41,6 +41,7 @@ Route::group([
 
     Route::get('/coupon', 'ApiController@coupons');
 
+    Route::get('/getIP','ApiController@getIP');
     Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
     Route::get('/currency/{ip}', 'ApiController@getCurrency');
     Route::get('/country/{ip}', 'ApiController@getCountryCode');
