@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Account;
 use App\Code;
+use App\Coupon;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Misc;
 use App\Region;
@@ -18,6 +19,7 @@ use App\Repositories\MiscRepository;
 use App\Gateway\PaymentGateway;
 use App\Gateway\PayPalGateway;
 use App\Gateway\StripeGateway;
+use PHPUnit\Framework\Constraint\IsEmpty;
 
 
 class ApiController extends Controller
@@ -46,6 +48,14 @@ class ApiController extends Controller
     public function acc($id)
     {
         return $this->aR->getAccount($id);
+    }
+
+    public function coupons()
+    {
+        $coupon = Coupon::all();
+
+        return response()->json($coupon);
+
     }
 
     public function accfromregion($id)
@@ -112,9 +122,14 @@ class ApiController extends Controller
         return $this->mR->convertToPLN($price, $curr, $curr_sec);
     }
 
-    public function getCurrency()
+    public function getCurrency($ip)
     {
-        return response()->json( $this->mR->getCurrency());
+        return response()->json($this->mR->getCurrency($ip));
+    }
+
+    public function getCountryCode($ip)
+    {
+        return response()->json($this->mR->getCountry($ip));
     }
 
 }

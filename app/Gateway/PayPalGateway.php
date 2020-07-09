@@ -2,7 +2,9 @@
 
 
 namespace App\Gateway;
+use App\Repositories\MiscRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Omnipay\Omnipay;
 use App\Order;
 class PayPalGateway
@@ -10,9 +12,15 @@ class PayPalGateway
 
     public $gateway;
     public $description;
-    public function __construct(PaymentGateway $pG)
+    /**
+     * @var MiscRepository
+     */
+    private $mR;
+
+    public function __construct(PaymentGateway $pG, MiscRepository $mR)
     {
         $this->gateway = Omnipay::create('PayPal_Rest');
+        $this->mR = $mR;
         $this->gateway->setClientId('AfoLskmRTLs0d72eLUWz5cnwTzAFq7RPzrOo3-8mwX7phiEdB6dY7b-ZY0LnHACyi4-a_0LeBDSY7EIH');
         $this->gateway->setSecret(env('EPop364EX06ezxjiEoJjr0l1k6JQWhp115lZuenF6zLPttSEi8x0zNSSOkjlLfBJqfCioH4lniwot8t_'));
         $this->gateway->setTestMode(true); //set it to 'false' when go live
@@ -33,7 +41,7 @@ class PayPalGateway
 
                 if ($response->isRedirect()) {
 //                    return $response->redirect(); // this will automatically forward the customer
-                    return $response;
+                    return $response->getRedirectUrl();
 
                 } else {
                     // not successful
@@ -74,12 +82,21 @@ class PayPalGateway
                     $payment->currency = $arr_body['transactions'][0]['amount']['currency'];
                     $payment->status = $arr_body['state'];
                     $payment->countrycode = $arr_body['payer']['payer_info']['country_code'];
+                    $payment->payment = 'PayPal';
+                    $payment->quantity = '1';
+                    $payment->description = 'Basic';
+                    $payment->PLN = $this->mR->convertToPLN($arr_body['transactions'][0]['amount']['total'], $arr_body['transactions'][0]['amount']['currency'], 'PLN' );
                     $payment->firstname = $arr_body['payer']['payer_info']['first_name'];
                     $payment->lastname = $arr_body['payer']['payer_info']['last_name'];
                     $payment->save();
-                }
 
-                return "Payment is successful. Your transaction id is: ". $arr_body['id'];
+                    $url = 'http://cokolwiek.webup-dev.pl/?paymentId='.$arr_body['id'].'';
+                    return redirect()->to($url)->send();
+                }
+                $url = 'http://cokolwiek.webup-dev.pl/?paymentId='.$arr_body['id'].'';
+                return redirect()->to($url)->send();
+//                return "Payment is successful. Your transaction id is: ". $arr_body['id'];
+
             } else {
                 return $response->getMessage();
             }

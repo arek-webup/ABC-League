@@ -24,7 +24,7 @@ class PaymentController extends Controller
         $this->pG->setPrice($request->price);
         $this->pG->setQuantity($request->quantity);
         $this->pG->setDescription($request->description);
-         return response()->json($this->ppG->charge($this->pG)->getRedirectUrl());
+         return response()->json($this->ppG->charge($this->pG));
     }
     public function pay_stripe(Request $request)
     {
