@@ -122,14 +122,14 @@ class ApiController extends Controller
         return $this->mR->convertToPLN($price, $curr, $curr_sec);
     }
 
-    public function getCurrency($ip)
+    public function getCurrency()
     {
-        return response()->json($this->mR->getCurrency($ip));
+        return response()->json($this->mR->getCurrency());
     }
 
-    public function getCountryCode($ip)
+    public function getCountryCode()
     {
-        return response()->json($this->mR->getCountry($ip));
+        return response()->json($this->mR->getCountry());
     }
 
     public function getIP()
