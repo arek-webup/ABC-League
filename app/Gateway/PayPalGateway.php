@@ -74,6 +74,8 @@ class PayPalGateway
 
                 if(!$isPaymentExist)
                 {
+
+
                     $payment = new Order;
                     $payment->order_id = $arr_body['id'];
 //                    $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
@@ -90,10 +92,10 @@ class PayPalGateway
                     $payment->lastname = $arr_body['payer']['payer_info']['last_name'];
                     $payment->save();
 
-                    $url = 'http://cokolwiek.webup-dev.pl/?paymentId='.$arr_body['id'].'';
+                    $url = 'http://cokolwiek.webup-dev.pl/payment/'.$arr_body['id'].'';
                     return redirect()->to($url)->send();
                 }
-                $url = 'http://cokolwiek.webup-dev.pl/?paymentId='.$arr_body['id'].'';
+                $url = 'http://cokolwiek.webup-dev.pl/payment/'.$arr_body['id'].'';
                 return redirect()->to($url)->send();
 //                return "Payment is successful. Your transaction id is: ". $arr_body['id'];
 
