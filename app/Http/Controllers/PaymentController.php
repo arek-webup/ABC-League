@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Order;
 use Omnipay\Omnipay;
 use App\Gateway\PaymentGateway;
 use App\Gateway\PayPalGateway;
@@ -44,5 +45,10 @@ class PaymentController extends Controller
     public function payment_error()
     {
         return 'Payment was canceled.';
+    }
+
+    public function verify($orderid)
+    {
+        return response()->json(Order::where('order_id', $orderid)->get());
     }
 }
