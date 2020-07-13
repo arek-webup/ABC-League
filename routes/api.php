@@ -37,7 +37,7 @@ Route::group([
     Route::get('/availableregions', 'ApiController@available_regions');
 
     Route::get('/reviews', 'ApiController@reviews');
-    Route::get('/reviews/add/{tekst}/{author}/{stars}', 'ApiController@add_review');
+    Route::post('/reviews/add', 'ApiController@add_review');
 
     Route::get('/coupon', 'ApiController@coupons');
 
