@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55b35484-38d1-4fd3-93f3-b18abcceb981" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReviewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReviewsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/ReviewsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ReviewsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Review.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +210,7 @@
       <workItem from="1593792274272" duration="274000" />
       <workItem from="1594056419441" duration="16467000" />
       <workItem from="1594662670130" duration="735000" />
-      <workItem from="1594920316239" duration="599000" />
+      <workItem from="1594920316239" duration="688000" />
     </task>
     <task id="LOCAL-00001" summary="Hello świat">
       <created>1592829785250</created>
@@ -536,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594920598769</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="asdasd">
+      <created>1594920930190</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1594920930190</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,7 +555,8 @@
     <MESSAGE value="Przebudowa kontrollerów" />
     <MESSAGE value="Posty i gety" />
     <MESSAGE value="asd" />
-    <option name="LAST_COMMIT_MESSAGE" value="asd" />
+    <MESSAGE value="asdasd" />
+    <option name="LAST_COMMIT_MESSAGE" value="asdasd" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="178" key="#Inspections" timestamp="1592828890043">
@@ -611,11 +617,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1593102923167" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594920601067">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594920932860">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1593186097124" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594920601067" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594920932860" />
     <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594556600782" />
     <state x="-1252" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1593195196272">
       <screen x="-1920" y="0" width="1920" height="1040" />
