@@ -20,10 +20,10 @@ class ReviewsRepository
         return Review::where('author', $author)->get();
     }
 
-    public function insert_review($tekst, $author, $stars)
+    public function insert_review($tekst, $author, $stars, $country_code)
     {
         Review::insert(
-            ['tekst' => $tekst, 'author' => $author, 'stars' => $stars, "created_at" =>  Carbon::now(), # new \Datetime()
+            ['tekst' => $tekst, 'author' => $author, 'stars' => $stars, 'country_code' => $country_code, 'flag' => "https://www.countryflags.io/".strtolower($country_code)."/flat/64.png", "created_at" =>  Carbon::now(), # new \Datetime()
                 "updated_at" => Carbon::now() ]);
     }
 }

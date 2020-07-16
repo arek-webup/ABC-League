@@ -49,6 +49,10 @@ class MiscRepository
         return $xml->geoplugin_countryCode;
     }
 
+    public function test()
+    {
+
+    }
     public function getCurrency()
     {
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
@@ -60,10 +64,9 @@ class MiscRepository
         }else{
             $ip = $_SERVER['REMOTE_ADDR'];
         }
-
         $xml = simplexml_load_file("http://www.geoplugin.net/xml.gp?ip=".$ip);
 
-        return $xml->geoplugin_currencyCode;
+        return [$xml->geoplugin_currencyCode, $xml->geoplugin_continentCode];
 
     }
 

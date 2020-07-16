@@ -44,7 +44,7 @@ class ApiController extends Controller
 
     public function getCurrency()
     {
-        return response()->json($this->mR->getCurrency());
+        return $this->mR->getCurrency();
     }
 
     public function getCountryCode()

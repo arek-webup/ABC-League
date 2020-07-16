@@ -53,6 +53,7 @@ Route::group([
 
     Route::get('/reviews', 'ReviewsController@reviews');
     Route::get('/reviews/add/{tekst}/{author}/{stars}', 'ReviewsController@add_review');
+    Route::get('/reviews/sum', 'ReviewsController@sum_review');
 
     Route::get('/coupon', 'ApiController@coupons');
 
@@ -61,7 +62,7 @@ Route::group([
     Route::get('/getIP','ApiController@getIP');
 
     Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
-    Route::get('/currency/', 'ApiController@getCurrency');
+    Route::get('/currency', 'ApiController@getCurrency');
     Route::get('/country', 'ApiController@getCountryCode');
     Route::get('/pay_stripe', 'PaymentController@pay_stripe');
     Route::post('/pay_paypal', 'PaymentController@pay_paypal')->name('charge');
