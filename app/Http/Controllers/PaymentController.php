@@ -49,6 +49,6 @@ class PaymentController extends Controller
 
     public function verify($orderid)
     {
-        return response()->json(Order::where('order_id', $orderid)->get());
+        return response()->json(Order::where('order_id', $orderid)->first());
     }
 }
