@@ -21,7 +21,7 @@ class ReviewsController extends Controller
     public function add_review($tekst, $author, $stars)
     {
         $this->reviewsRepository->insert_review($tekst, $author, $stars);
-        return response()->json('success');
+        return $this->reviewsRepository->getReview($author);
     }
 
 

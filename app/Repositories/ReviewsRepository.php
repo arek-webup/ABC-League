@@ -14,6 +14,11 @@ class ReviewsRepository
         return Review::all();
     }
 
+    public function getReview($author)
+    {
+        return Review::where('author', $author)->get();
+    }
+
     public function insert_review($tekst, $author, $stars)
     {
         Review::insert(
