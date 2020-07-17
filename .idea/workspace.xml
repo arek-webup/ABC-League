@@ -211,14 +211,7 @@
       <workItem from="1594056419441" duration="16467000" />
       <workItem from="1594662670130" duration="735000" />
       <workItem from="1594920316239" duration="4189000" />
-      <workItem from="1595002518486" duration="619000" />
-    </task>
-    <task id="LOCAL-00002" summary="Hello świat v2">
-      <created>1592830266509</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1592830266509</updated>
+      <workItem from="1595002518486" duration="748000" />
     </task>
     <task id="LOCAL-00003" summary="Hello świat">
       <created>1593009384809</created>
@@ -556,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594924199580</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="y">
+      <created>1595003152258</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1595003152261</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +574,8 @@
     <MESSAGE value="123" />
     <MESSAGE value="123123" />
     <MESSAGE value="123123123" />
-    <option name="LAST_COMMIT_MESSAGE" value="123123123" />
+    <MESSAGE value="y" />
+    <option name="LAST_COMMIT_MESSAGE" value="y" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="178" key="#Inspections" timestamp="1592828890043">
@@ -602,11 +603,11 @@
     <state x="-1230" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1592828521065" />
     <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1593196552006" />
     <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594556422098" />
-    <state x="647" y="31" key="CommitChangelistDialog2" timestamp="1594924198959">
+    <state x="647" y="31" key="CommitChangelistDialog2" timestamp="1595003151025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1337" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1593186094962" />
-    <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594924198959" />
+    <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595003151025" />
     <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594556597865" />
     <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1594921110983">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -635,11 +636,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1593102923167" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594924200963">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1595003154934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1593186097124" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1594924200963" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595003154934" />
     <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594556600782" />
     <state x="-1252" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1593195196272">
       <screen x="-1920" y="0" width="1920" height="1040" />
