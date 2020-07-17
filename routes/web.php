@@ -56,6 +56,7 @@ Route::group([
     Route::get('/reviews/sum', 'ReviewsController@sum_review');
 
     Route::get('/coupon', 'ApiController@coupons');
+    Route::get('/test/{ip}', 'ApiController@test');
 
     Route::get('/verify/{orderid}', 'PaymentController@verify');
 

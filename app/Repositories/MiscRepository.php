@@ -65,7 +65,6 @@ class MiscRepository
             $ip = $_SERVER['REMOTE_ADDR'];
         }
         $xml = simplexml_load_file("http://www.geoplugin.net/xml.gp?ip=".$ip);
-        return dd($xml);
         return [$xml->geoplugin_currencyCode, $xml->geoplugin_continentCode];
 
     }
