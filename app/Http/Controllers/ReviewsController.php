@@ -40,7 +40,7 @@ class ReviewsController extends Controller
 
     public function sum_review()
     {
-        Return round(Review::all()->average('stars'),2);
+        Return [round(Review::all()->average('stars'),2), Review::all()->count()];
     }
 
 
