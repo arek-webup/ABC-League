@@ -45,7 +45,7 @@ Route::group([
     Route::get('/', 'HomeController@index');
     Route::get('/accounts', 'AccountsController@accounts');
     Route::get('/accounts/{id}', 'AccountsController@acc');
-    Route::get('/accounts/regionid/{id}', 'AccountsController@accfromregion');
+    Route::get('/accounts/region/{id}', 'AccountsController@accfromregion');
     Route::get('/accounts/regionname/{name}', 'AccountsController@accfromregionname');
 
     Route::get('/regions', 'RegionsController@regions');
