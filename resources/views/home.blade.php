@@ -81,6 +81,10 @@
                             <blockquote class="epigraph">
                                 <div><p>Zwraca konta o danym id np. 50 oraz ILOŚć kodów</p>
                                 </div></blockquote>
+                            <p>GET /accounts/regionname/{regionname} </p>
+                            <blockquote class="epigraph">
+                                <div><p>Zwraca konta z danego regionu gdzie REGIONNAME == EUNE, EUW, NA, OCE itd.</p>
+                                </div></blockquote>
 
 
 
@@ -132,11 +136,11 @@
 
                             <h1>Płatności<a class="headerlink" href="#preface-to-the-api-design-guide" title="Permalink to this headline">¶</a></h1>
                             <p>POST /pay_paypal </p>
-                            <blockquote class="epigraph">
+                            <bleevockquote class="epigraph">
                                 <div>
                                     <p>Dane do wysłania: email, currency, price, quantity, description</p>
                                     <p>Dane powrotne: sam zobaczysz, jakby czegoś brakowało to wywali error code 500 albo empty </p>
-                                </div></blockquote>
+                                </div></bleevockquote>
 
                             <p>POST /pay_stripe </p>
                             <blockquote class="epigraph">
