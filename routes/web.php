@@ -65,7 +65,7 @@ Route::group([
     Route::get('/convert/{price}/{curr}/{curr_sec}', 'ApiController@covert');
     Route::get('/currency', 'ApiController@getCurrency');
     Route::get('/country', 'ApiController@getCountryCode');
-    Route::get('/pay_stripe', 'PaymentController@pay_stripe');
+    Route::post('/pay_stripe', 'PaymentController@pay_stripe');
     Route::post('/pay_paypal', 'PaymentController@pay_paypal')->name('charge');
     Route::get('paymentsuccess', 'PaymentController@payment_success');
     Route::get('paymenterror', 'PaymentController@payment_error');

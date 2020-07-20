@@ -109,17 +109,26 @@
                                 <div><p>Dodawanie opinii - postujesz: "tekst", "author", "stars"</p>
                                 </div></blockquote>
 
+                            <p>GET /reviews/sum </p>
+                            <blockquote class="epigraph">
+                                <div><p>Informacje o opiniach (ilość i jakość)</p>
+                                </div></blockquote>
+
                             <p><strong>Pomocnicze</strong>.</p>
                             <p>GET /currency </p>
                             <blockquote class="epigraph">
-                                <div><p>zwraca walute w zależności od tego w jakim kraju jesteś (działa na większość dużych krajów)</p>
+                                <div><p>Zwraca walute w zależności od tego w jakim kraju jesteś + zwraca ContinentCode (możliwe: AF, AN, AS, EU, NA, OC, SA) </p>
                                 </div></blockquote>
                             <p>GET /convert/{price}/{curr}/{curr_sec} </p>
                             <blockquote class="epigraph">
                                 <div>
                                     <p>price: cena obecna, curr: cena z jakiej konwertujesz, curr_sec: cena na jaką konwertujesz</p>
                                 </div></blockquote>
-
+                            <p>GET /coupon </p>
+                            <blockquote class="epigraph">
+                                <div>
+                                    <p>Zwraca kupony </p>
+                                </div></blockquote>
 
                             <h1>Płatności<a class="headerlink" href="#preface-to-the-api-design-guide" title="Permalink to this headline">¶</a></h1>
                             <p>POST /pay_paypal </p>
@@ -128,6 +137,23 @@
                                     <p>Dane do wysłania: email, currency, price, quantity, description</p>
                                     <p>Dane powrotne: sam zobaczysz, jakby czegoś brakowało to wywali error code 500 albo empty </p>
                                 </div></blockquote>
+
+                            <p>POST /pay_stripe </p>
+                            <blockquote class="epigraph">
+                                <div>
+                                    <p>Pobiera pieniądze z konta i informuje czy się udało (NIGDY NIE CALLUJ BEZ MOJEJ ZGODY BO JEST WERSJA LIVE (pobierze Ci hajs z konta))</p>
+                                    <p>Dane do wysłania: price, name, currency, email, token <- token jest tworzony przez JS Stripe który sprawdza dane karty przed utworzeniem tokenu)</p>
+                                    <p>Dane powrotne: success or failed </p>
+                                </div></blockquote>
+
+                            <p>GET /verify/{orderid} </p>
+                            <blockquote class="epigraph">
+                                <div>
+                                    <p>Dane do wysłania: orderid</p>
+                                    <p>Dane powrotne: info o zakupie </p>
+                                </div></blockquote>
+
+
                         </div>
                     </div>
                 </div>
