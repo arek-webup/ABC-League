@@ -44,6 +44,7 @@ Route::group([
 
     Route::get('/', 'HomeController@index');
     Route::get('/accounts', 'AccountsController@accounts');
+    Route::get('/charge', 'ApiController@charge');
     Route::get('/accounts/{id}', 'AccountsController@acc');
     Route::get('/accounts/region/{id}', 'AccountsController@accfromregion');
     Route::get('/accounts/regionname/{name}', 'AccountsController@accfromregionname');

@@ -20,11 +20,17 @@ use App\Repositories\MiscRepository;
 use App\Gateway\PaymentGateway;
 use App\Gateway\PayPalGateway;
 use App\Gateway\StripeGateway;
+use Omnipay\Omnipay;
 use PHPUnit\Framework\Constraint\IsEmpty;
 
 
 class ApiController extends Controller
 {
+
+    /**
+     * @var \Omnipay\Common\GatewayInterface
+     */
+    private $gateway;
 
     public function __construct(MiscRepository $mR)
     {
@@ -50,6 +56,35 @@ class ApiController extends Controller
     public function getCountryCode()
     {
         return response()->json($this->mR->getCountry());
+    }
+
+    public function charge()
+    {
+        $this->gateway = Omnipay::create('PayPal_Rest');
+
+        $this->gateway->setClientId('AfoLskmRTLs0d72eLUWz5cnwTzAFq7RPzrOo3-8mwX7phiEdB6dY7b-ZY0LnHACyi4-a_0LeBDSY7EIH');
+        $this->gateway->setSecret(env('EPop364EX06ezxjiEoJjr0l1k6JQWhp115lZuenF6zLPttSEi8x0zNSSOkjlLfBJqfCioH4lniwot8t_'));
+        $this->gateway->setTestMode(true); //set it to 'false' when go live
+        try {
+            $response = $this->gateway->purchase(array(
+                'amount' => 1*1,
+                'currency' => "PLN",
+                'description' => "opis",
+                'returnUrl' => url('paymentsuccess'),
+                'cancelUrl' => url('paymenterror'),
+            ))->send();
+
+            if ($response->isRedirect()) {
+//                    return $response->redirect(); // this will automatically forward the customer
+                return dd($response->getData());
+
+            } else {
+                // not successful
+                return $response->getMessage();
+            }
+        } catch(Exception $e) {
+            return $e->getMessage();
+        }
     }
 
     public function getIP()

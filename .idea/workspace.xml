@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55b35484-38d1-4fd3-93f3-b18abcceb981" name="Default Changelist" comment="">
+    <list default="true" id="55b35484-38d1-4fd3-93f3-b18abcceb981" name="Default Changelist" comment="y">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Gateway/PayPalGateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gateway/PayPalGateway.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Gateway/PaymentGateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gateway/PaymentGateway.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +163,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ABCLeaguev3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -215,14 +219,8 @@
       <workItem from="1595004055439" duration="1202000" />
       <workItem from="1595011965147" duration="1907000" />
       <workItem from="1595256298752" duration="31000" />
-      <workItem from="1595257474362" duration="3228000" />
-    </task>
-    <task id="LOCAL-00008" summary="Hello świat">
-      <created>1593014363549</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1593014363549</updated>
+      <workItem from="1595257474362" duration="3474000" />
+      <workItem from="1595321070610" duration="2626000" />
     </task>
     <task id="LOCAL-00009" summary="Hello świat">
       <created>1593015208375</created>
@@ -560,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595279394907</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="y">
+      <created>1595279657828</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1595279657828</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,23 +606,23 @@
     </state>
     <state x="-1230" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1592826823542" />
     <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590314921220" />
-    <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595258413593">
+    <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595321237237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1230" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1592828521065" />
-    <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595258413593" />
+    <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595321237237" />
     <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594556422098" />
-    <state x="647" y="31" key="CommitChangelistDialog2" timestamp="1595279394221">
+    <state x="647" y="31" key="CommitChangelistDialog2" timestamp="1595321418736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1337" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1593186094962" />
-    <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595279394221" />
+    <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595321418736" />
     <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594556597865" />
-    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1595257642208">
+    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1595318510905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1593009587441" />
-    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595257642208" />
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595318510905" />
     <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594455434638" />
     <state x="0" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1589922714562">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -640,11 +645,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1593102923167" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1595279397968">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1595279659438">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1593186097124" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595279397968" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595279659438" />
     <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594556600782" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1595256301554">
       <screen x="0" y="0" width="1920" height="1040" />

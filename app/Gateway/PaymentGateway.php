@@ -13,6 +13,7 @@ class PaymentGateway
     private $email;
     private $surname;
     private $lastname;
+    private $region;
 
     public function setDescription($description)
     {
@@ -89,6 +90,17 @@ class PaymentGateway
     public function getLastname()
     {
         return $this->lastname;
+    }
+
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
+    public function setRegion($region)
+    {
+        $this->region = $region;
+        return $this;
     }
 
     public function getAll()

@@ -2,6 +2,9 @@
 
 
 namespace App\Gateway;
+use App\Account;
+use App\Code;
+use App\Region;
 use App\Repositories\MiscRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -30,6 +33,7 @@ class PayPalGateway
     public function charge(PaymentGateway $pG)
     {
 
+
             try {
                 $response = $this->gateway->purchase(array(
                     'amount' => $pG->getPrice() * $pG->getQuantity(),
@@ -38,7 +42,11 @@ class PayPalGateway
                     'returnUrl' => url('paymentsuccess'),
                     'cancelUrl' => url('paymenterror'),
                 ))->send();
-
+                $payment = new Order;
+                $payment->order_id = $response->getData()['id'];
+                $payment->region_id = $pG->getRegion();
+                $payment->description = $pG->getDescription();
+                $payment->save();
                 if ($response->isRedirect()) {
 //                    return $response->redirect(); // this will automatically forward the customer
                     return $response->getRedirectUrl();
@@ -70,15 +78,17 @@ class PayPalGateway
 
 
                 // Insert transaction data into the database
-                $isPaymentExist = Order::where('order_id', $arr_body['id'])->first();
-
-                if(!$isPaymentExist)
-                {
+                $lol = Order::where('order_id', $arr_body['id'])->first();
 
 
-                    $payment = new Order;
-                    $payment->order_id = $arr_body['id'];
-//                    $payment->payer_id = $arr_body['payer']['payer_info']['payer_id'];
+
+
+                    $payment = Order::where('order_id',$arr_body['id'])->first();
+                    $regionid = Region::where('name',$payment->region_id)->get()[0]->id;
+                    $acc = Account::where('region_id',$regionid)->where("name",$payment->description)->count();
+                    $account_id = Account::where('region_id',$regionid)->where("name",$payment->description)->get()[0]->id;
+                    $code = Code::where('account_id', $account_id)->get()->take($payment->quantity);
+
                     $payment->email = $arr_body['payer']['payer_info']['email'];
                     $payment->price = $arr_body['transactions'][0]['amount']['total'];
                     $payment->currency = $arr_body['transactions'][0]['amount']['currency'];
@@ -86,15 +96,15 @@ class PayPalGateway
                     $payment->countrycode = $arr_body['payer']['payer_info']['country_code'];
                     $payment->payment = 'PayPal';
                     $payment->quantity = '1';
-                    $payment->description = 'Basic';
+
+                    $payment->code = $code;
                     $payment->PLN = $this->mR->convertToPLN($arr_body['transactions'][0]['amount']['total'], $arr_body['transactions'][0]['amount']['currency'], 'PLN' );
                     $payment->firstname = $arr_body['payer']['payer_info']['first_name'];
                     $payment->lastname = $arr_body['payer']['payer_info']['last_name'];
                     $payment->save();
+                    //Code::where('account_id', $payment->id)->take($payment->quantity)->delete();
 
-                    $url = 'http://cokolwiek.webup-dev.pl/payment/'.$arr_body['id'].'';
-                    return redirect()->to($url)->send();
-                }
+
                 $url = 'http://cokolwiek.webup-dev.pl/payment/'.$arr_body['id'].'';
                 return redirect()->to($url)->send();
 //                return "Payment is successful. Your transaction id is: ". $arr_body['id'];
