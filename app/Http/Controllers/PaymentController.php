@@ -28,7 +28,6 @@ class PaymentController extends Controller
 
     public function pay_paypal(Request $request)
     {
-        $this->pG->setEmail($request->email);
         $this->pG->setCurrency($request->currency);
         $this->pG->setPrice($request->price);
         $this->pG->setQuantity($request->quantity);

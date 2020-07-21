@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55b35484-38d1-4fd3-93f3-b18abcceb981" name="Default Changelist" comment="y">
+    <list default="true" id="55b35484-38d1-4fd3-93f3-b18abcceb981" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Gateway/PayPalGateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gateway/PayPalGateway.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Gateway/PaymentGateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gateway/PaymentGateway.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,14 +216,7 @@
       <workItem from="1595011965147" duration="1907000" />
       <workItem from="1595256298752" duration="31000" />
       <workItem from="1595257474362" duration="3474000" />
-      <workItem from="1595321070610" duration="2626000" />
-    </task>
-    <task id="LOCAL-00009" summary="Hello świat">
-      <created>1593015208375</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1593015208375</updated>
+      <workItem from="1595321070610" duration="3899000" />
     </task>
     <task id="LOCAL-00010" summary="Hello świat">
       <created>1593015322176</created>
@@ -565,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595279657828</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="y">
+      <created>1595323753477</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1595323753479</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,11 +608,11 @@
     <state x="-1230" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1592828521065" />
     <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595321237237" />
     <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594556422098" />
-    <state x="647" y="31" key="CommitChangelistDialog2" timestamp="1595321418736">
+    <state x="647" y="31" key="CommitChangelistDialog2" timestamp="1595323752626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1337" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1593186094962" />
-    <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595321418736" />
+    <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595323752626" />
     <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594556597865" />
     <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1595318510905">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -645,11 +641,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1593102923167" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1595279659438">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1595323755434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1593186097124" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595279659438" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595323755434" />
     <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594556600782" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1595256301554">
       <screen x="0" y="0" width="1920" height="1040" />
