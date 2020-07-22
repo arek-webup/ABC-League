@@ -41,6 +41,7 @@ Route::group([
     'middleware' => ['cors'],
 
 ], function () {
+    Route::get('/reviews/sum', 'ReviewsController@sum_review');
 
     Route::get('/', 'HomeController@index');
     Route::get('/accounts', 'AccountsController@accounts');
@@ -56,7 +57,7 @@ Route::group([
     Route::get('/reviews', 'ReviewsController@reviews');
     Route::get('/reviews/{cookie}', 'ReviewsController@reviewsbycookie');
     Route::get('/reviews/add/{tekst}/{author}/{stars}/{cookie}', 'ReviewsController@add_review');
-    Route::get('/reviews/sum', 'ReviewsController@sum_review');
+
 
     Route::get('/coupon', 'ApiController@coupons');
     Route::get('/test/{ip}', 'ApiController@test');
