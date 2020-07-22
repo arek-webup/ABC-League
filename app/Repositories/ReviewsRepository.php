@@ -12,7 +12,7 @@ class ReviewsRepository
 
     public function getReviews()
     {
-        return Review::all();
+        return Review::where('cookie',NULL)->get();
     }
 
     public function getReview($author)
