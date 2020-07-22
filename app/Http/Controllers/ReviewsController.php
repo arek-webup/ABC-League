@@ -19,7 +19,7 @@ class ReviewsController extends Controller
         return $this->reviewsRepository->getReviews();
     }
 
-    public function add_review($tekst, $author, $stars)
+    public function add_review($tekst, $author, $stars, $cookie)
     {
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
             //ip from share internet
@@ -34,7 +34,7 @@ class ReviewsController extends Controller
 
         $country_code = $xml->geoplugin_countryCode;
 
-        $this->reviewsRepository->insert_review($tekst, $author, $stars, $country_code);
+        $this->reviewsRepository->insert_review($tekst, $author, $stars, $country_code, $cookie);
         return $this->reviewsRepository->getReview($author);
     }
 
