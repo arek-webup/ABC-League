@@ -19,6 +19,11 @@ class ReviewsController extends Controller
         return $this->reviewsRepository->getReviews();
     }
 
+    public function reviewsbycookie($cookie)
+    {
+        return Review::where('cookie',$cookie)->get();
+    }
+
     public function add_review($tekst, $author, $stars, $cookie)
     {
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
