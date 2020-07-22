@@ -45,7 +45,7 @@ class ReviewsController extends Controller
 
     public function sum_review()
     {
-        Return [round(Review::all()->average('stars'),2), Review::all()->count()];
+        Return [round(Review::where('cookie',NULL)->get()->average('stars'),2), Review::where('cookie',NULL)->count()];
     }
 
 
