@@ -48,7 +48,7 @@ class PaymentController extends Controller
 
         }else{
             $newprice = $newprice - $newprice * ($request->discount/100);
-            $this->pG->setPrice($newprice);
+            $this->pG->setPrice(round($newprice,2));
         }
 
 
