@@ -36,7 +36,7 @@ class PayPalGateway
 
             try {
                 $response = $this->gateway->purchase(array(
-                    'amount' => $pG->getPrice() * $pG->getQuantity(),
+                    'amount' => $pG->getPrice() * 1,
                     'currency' => $pG->getCurrency(),
                     'description' => $pG->getDescription(),
                     'returnUrl' => url('paymentsuccess'),
