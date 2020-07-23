@@ -29,29 +29,15 @@ class PaymentController extends Controller
     public function pay_paypal(Request $request)
     {
         $this->pG->setCurrency($request->currency);
-//        $this->pG->setPrice($request->price);
+        if($request->discount == 0)
+        {
+            $this->pG->setPrice($request->price);
+        }else{
+            $this->pG->setPrice($request->price - ($request->price * ($request->discount/100)));
+        }
         $this->pG->setQuantity($request->quantity);
         $this->pG->setDescription($request->description);
         $this->pG->setRegion($request->region);
-        if($request->quantity > 1)
-        {
-            $siema = 0.9;
-        }else{
-            $siema = 1;
-        }
-        $newprice = $request->price * $request->quantity  * ($siema);
-
-        $discount = $request->discount;
-        if($discount == 0)
-        {
-            $this->pG->setPrice($newprice);
-
-        }else{
-            $newprice = $newprice - $newprice * ($request->discount/100);
-            $this->pG->setPrice(round($newprice,2));
-        }
-
-
          return response()->json($this->ppG->charge($this->pG));
     }
     public function pay_stripe(Request $request)
