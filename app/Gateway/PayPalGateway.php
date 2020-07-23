@@ -46,6 +46,7 @@ class PayPalGateway
                 $payment->order_id = $response->getData()['id'];
                 $payment->region_id = $pG->getRegion();
                 $payment->description = $pG->getDescription();
+                $payment->quantity = $pG->getQuantity();
                 $payment->save();
                 if ($response->isRedirect()) {
 //                    return $response->redirect(); // this will automatically forward the customer
@@ -84,6 +85,7 @@ class PayPalGateway
 
 
                     $payment = Order::where('order_id',$arr_body['id'])->first();
+
                     $regionid = Region::where('name',$payment->region_id)->get()[0]->id;
                     $acc = Account::where('region_id',$regionid)->where("name",$payment->description)->count();
                     $account_id = Account::where('region_id',$regionid)->where("name",$payment->description)->get()[0]->id;
