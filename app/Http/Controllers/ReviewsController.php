@@ -28,6 +28,11 @@ class ReviewsController extends Controller
         return Review::where('cookie',$cookie)->get();
     }
 
+    public function reviewssumbycookie($cookie)
+    {
+        return [Review::where('cookie',$cookie)->get()->average('stars'),Reviewwhere('cookie',$cookie)->get()->count()];
+    }
+
     public function add_review($tekst, $author, $stars, $cookie)
     {
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){

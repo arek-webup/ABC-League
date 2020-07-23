@@ -58,6 +58,7 @@ Route::group([
     Route::get('/reviews', 'ReviewsController@reviews');
     Route::get('/reviewscookie', 'ReviewsController@reviewscookie');
     Route::get('/reviews/{cookie}', 'ReviewsController@reviewsbycookie');
+    Route::get('/reviewssum/{cookie}', 'ReviewsController@reviewssumbycookie');
     Route::get('/reviews/add/{tekst}/{author}/{stars}/{cookie}', 'ReviewsController@add_review');
 
 
