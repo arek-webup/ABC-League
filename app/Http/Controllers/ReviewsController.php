@@ -30,7 +30,7 @@ class ReviewsController extends Controller
 
     public function reviewssumbycookie($cookie)
     {
-        return [Review::where('cookie',$cookie)->get()->average('stars'),Reviewwhere('cookie',$cookie)->get()->count()];
+        return [Review::where('cookie',$cookie)->get()->average('stars'),Review::where('cookie',$cookie)->get()->count()];
     }
 
     public function add_review($tekst, $author, $stars, $cookie)
