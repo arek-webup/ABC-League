@@ -19,6 +19,10 @@ class ReviewsController extends Controller
         return $this->reviewsRepository->getReviews();
     }
 
+    public function reviewscookie()
+    {
+        return Review::all();
+    }
     public function reviewsbycookie($cookie)
     {
         return Review::where('cookie',$cookie)->get();
@@ -46,6 +50,11 @@ class ReviewsController extends Controller
     public function sum_review()
     {
         Return [round(Review::where('cookie',NULL)->get()->average('stars'),2), Review::where('cookie',NULL)->count()];
+    }
+
+    public function sum_reviewcookie()
+    {
+        Return [round(Review::all()->average('stars'),2), Review::all()->count()];
     }
 
 

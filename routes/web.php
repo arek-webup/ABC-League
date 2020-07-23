@@ -42,6 +42,7 @@ Route::group([
 
 ], function () {
     Route::get('/reviews/sum', 'ReviewsController@sum_review');
+    Route::get('/reviewscookie/sum', 'ReviewsController@sum_reviewcookie');
 
     Route::get('/', 'HomeController@index');
     Route::get('/accounts', 'AccountsController@accounts');
@@ -55,6 +56,7 @@ Route::group([
     Route::get('/availableregions', 'RegionsController@available_regions');
 
     Route::get('/reviews', 'ReviewsController@reviews');
+    Route::get('/reviewscookie', 'ReviewsController@reviewscookie');
     Route::get('/reviews/{cookie}', 'ReviewsController@reviewsbycookie');
     Route::get('/reviews/add/{tekst}/{author}/{stars}/{cookie}', 'ReviewsController@add_review');
 
