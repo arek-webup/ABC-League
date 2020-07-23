@@ -29,12 +29,7 @@ class PaymentController extends Controller
     public function pay_paypal(Request $request)
     {
         $this->pG->setCurrency($request->currency);
-        if($request->discount == 0)
-        {
-            $this->pG->setPrice($request->price);
-        }else{
-            $this->pG->setPrice($request->price - ($request->price * ($request->discount/100)));
-        }
+        $this->pG->setPrice($request->price);
         $this->pG->setQuantity($request->quantity);
         $this->pG->setDescription($request->description);
         $this->pG->setRegion($request->region);
