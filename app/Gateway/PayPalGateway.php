@@ -24,9 +24,9 @@ class PayPalGateway
     {
         $this->gateway = Omnipay::create('PayPal_Rest');
         $this->mR = $mR;
-        $this->gateway->setClientId('AfoLskmRTLs0d72eLUWz5cnwTzAFq7RPzrOo3-8mwX7phiEdB6dY7b-ZY0LnHACyi4-a_0LeBDSY7EIH');
-        $this->gateway->setSecret(env('EPop364EX06ezxjiEoJjr0l1k6JQWhp115lZuenF6zLPttSEi8x0zNSSOkjlLfBJqfCioH4lniwot8t_'));
-        $this->gateway->setTestMode(true); //set it to 'false' when go live
+        $this->gateway->setClientId('AepWl7aJbpJ53rL1rNW_yKzhxrIcVbeVeF4xHbnctWMTuqlXJWQN5sHuIrB-_fmIzTmipErMlcpD_NIi');
+        $this->gateway->setSecret(env('EMuXz49NpoWuSH6j0-a82uUHUKdpTIDOklMmUKDN5kmT5N_GoxX5knYpi8QICLDIx2cxLiEHESWlHNML'));
+        $this->gateway->setTestMode(false); //set it to 'false' when go live
 
     }
 
@@ -104,10 +104,11 @@ class PayPalGateway
                     $payment->firstname = $arr_body['payer']['payer_info']['first_name'];
                     $payment->lastname = $arr_body['payer']['payer_info']['last_name'];
                     $payment->save();
-                    //Code::where('account_id', $payment->id)->take($payment->quantity)->delete();
+
+                    Code::where('account_id', $account_id)->take($payment->quantity)->delete();
 
 
-                $url = 'http://cokolwiek.webup-dev.pl/payment/'.$arr_body['id'].'';
+                $url = 'https://accounts4life.com/payment/'.$arr_body['id'].'';
                 return redirect()->to($url)->send();
 //                return "Payment is successful. Your transaction id is: ". $arr_body['id'];
 
