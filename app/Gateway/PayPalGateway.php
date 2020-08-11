@@ -26,7 +26,7 @@ class PayPalGateway
         $this->mR = $mR;
         $this->gateway->setClientId('AepWl7aJbpJ53rL1rNW_yKzhxrIcVbeVeF4xHbnctWMTuqlXJWQN5sHuIrB-_fmIzTmipErMlcpD_NIi');
         $this->gateway->setSecret(env('EMuXz49NpoWuSH6j0-a82uUHUKdpTIDOklMmUKDN5kmT5N_GoxX5knYpi8QICLDIx2cxLiEHESWlHNML'));
-        $this->gateway->setTestMode(false); //set it to 'false' when go live
+        $this->gateway->setTestMode(true); //set it to 'false' when go live
 
     }
 
