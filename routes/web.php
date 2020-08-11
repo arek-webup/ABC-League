@@ -74,7 +74,7 @@ Route::group([
     Route::get('/country', 'ApiController@getCountryCode');
     Route::post('/pay_stripe', 'PaymentController@pay_stripe');
     Route::post('/pay_paypal', 'PaymentController@pay_paypal')->name('charge');
-    Route::post('paymentsuccess', 'PaymentController@payment_success');
+    Route::get('paymentsuccess', 'PaymentController@payment_success');
     Route::get('paymenterror', 'PaymentController@payment_error');
 });
 
