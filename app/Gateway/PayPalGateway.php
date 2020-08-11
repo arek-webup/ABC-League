@@ -64,7 +64,7 @@ class PayPalGateway
     public function payment_success(Request $request, $pG)
     {
         // Once the transaction has been approved, we need to complete it.
-        return dd($request);
+
         if ($request->input('paymentId') && $request->input('PayerID'))
         {
             $transaction = $this->gateway->completePurchase(array(
@@ -75,6 +75,7 @@ class PayPalGateway
 
             if ($response->isSuccessful())
             {
+                return dd($request);
                 // The customer has successfully paid.
                 $arr_body = $response->getData();
 
