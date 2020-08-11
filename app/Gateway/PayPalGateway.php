@@ -115,7 +115,7 @@ class PayPalGateway
 //                return "Payment is successful. Your transaction id is: ". $arr_body['id'];
 
             } else {
-                return $response->getMessage();
+                return "not success";
             }
         } else {
             return 'Transaction is declined';
