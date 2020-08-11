@@ -72,7 +72,7 @@ class PayPalGateway
                 'transactionReference' => $request->input('paymentId'),
             ));
             $response = $transaction->send();
-
+            return dd($request);
             if ($response->isSuccessful())
             {
                 return dd($request);
