@@ -25,15 +25,13 @@ class PayPalGateway
         $this->gateway = Omnipay::create('PayPal_Rest');
         $this->mR = $mR;
         $this->gateway->setClientId('AepWl7aJbpJ53rL1rNW_yKzhxrIcVbeVeF4xHbnctWMTuqlXJWQN5sHuIrB-_fmIzTmipErMlcpD_NIi');
-        $this->gateway->setSecret(env('EMuXz49NpoWuSH6j0-a82uUHUKdpTIDOklMmUKDN5kmT5N_GoxX5knYpi8QICLDIx2cxLiEHESWlHNML'));
-        $this->gateway->setTestMode(true); //set it to 'false' when go live
-
+        $this->gateway->setSecret('EMuXz49NpoWuSH6j0-a82uUHUKdpTIDOklMmUKDN5kmT5N_GoxX5knYpi8QICLDIx2cxLiEHESWlHNML');
+        //$this->gateway->setUsername('officeabcleague@gmail.com');
+        $this->gateway->setTestMode(false); //set it to 'false' when go live
     }
 
     public function charge(PaymentGateway $pG)
     {
-
-
             try {
                 $response = $this->gateway->purchase(array(
                     'amount' => $pG->getPrice() * 1,
@@ -72,7 +70,7 @@ class PayPalGateway
                 'transactionReference' => $request->input('paymentId'),
             ));
             $response = $transaction->send();
-            return dd($response);
+
             if ($response->isSuccessful())
             {
                 return dd($request);

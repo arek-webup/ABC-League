@@ -159,7 +159,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../stripe" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -230,7 +230,8 @@
       <workItem from="1596317226885" duration="1341000" />
       <workItem from="1596633494394" duration="694000" />
       <workItem from="1596723161673" duration="501000" />
-      <workItem from="1597143215269" duration="2126000" />
+      <workItem from="1597143215269" duration="2248000" />
+      <workItem from="1598188012194" duration="3081000" />
     </task>
     <task id="LOCAL-00030" summary="Hello świat">
       <created>1593107785172</created>
@@ -629,11 +630,11 @@
     <state x="-1337" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1597146764540" />
     <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1596723291970" />
     <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595350649728" />
-    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1596226080463">
+    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1598188126285">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1593009587441" />
-    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1596226080463" />
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1598188126285" />
     <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594455434638" />
     <state x="0" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1589922714562">
       <screen x="0" y="0" width="1920" height="1040" />
