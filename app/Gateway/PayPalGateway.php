@@ -96,7 +96,6 @@ class PayPalGateway
                     $payment->status = $arr_body['state'];
                     $payment->countrycode = $arr_body['payer']['payer_info']['country_code'];
                     $payment->payment = 'PayPal';
-                    $payment->quantity = '1';
 
                     $payment->code = $code;
                     $payment->PLN = $this->mR->convertToPLN($arr_body['transactions'][0]['amount']['total'], $arr_body['transactions'][0]['amount']['currency'], 'PLN' );
