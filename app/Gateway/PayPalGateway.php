@@ -73,7 +73,6 @@ class PayPalGateway
 
             if ($response->isSuccessful())
             {
-                return dd($request);
                 // The customer has successfully paid.
                 $arr_body = $response->getData();
 
