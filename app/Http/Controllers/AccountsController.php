@@ -17,7 +17,13 @@ class AccountsController extends Controller
 
     public function accounts()
     {
-        return response()->json($this->aR->getAllAccounts());
+        //return $this->aR->getAllAccounts());
+        $acc = Account::all();
+        for($i = 0; $i<$acc->count();$i++)
+        {
+            $count[$i] = Code::where('account_id',$acc[$i]->id)->count();
+        }
+        return response()->json(['acc' => $acc, 'count' => $count]);
     }
 
     public function account($id)
