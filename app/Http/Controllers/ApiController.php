@@ -9,8 +9,12 @@ use App\Http\Controllers\Auth\VerificationController;
 use App\Misc;
 use App\Order;
 use App\Region;
+
 use App\Repositories\ReviewsRepository;
 use App\Review;
+use DvK\Laravel\Vat\Facades\Rates;
+use DvK\Laravel\Vat\Facades\Validator;
+use DvK\Laravel\Vat\Facades\Countries;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use http\Client\Response;
@@ -22,7 +26,7 @@ use App\Gateway\PayPalGateway;
 use App\Gateway\StripeGateway;
 use Omnipay\Omnipay;
 use PHPUnit\Framework\Constraint\IsEmpty;
-use SoapClient;
+
 
 
 class ApiController extends Controller
@@ -120,7 +124,8 @@ class ApiController extends Controller
             'requestDate',
             'valid',
             'name',
-            'address'
+            'address',
+            'vat_rate'
         );
 
         $content = "<s11:Envelope xmlns:s11='http://schemas.xmlsoap.org/soap/envelope/'>
@@ -131,6 +136,7 @@ class ApiController extends Controller
     </tns1:checkVat>
   </s11:Body>
 </s11:Envelope>";
+        $rates =
 
         $opts = array (
             'http' => array (
@@ -140,7 +146,7 @@ class ApiController extends Controller
                 'timeout' => $timeout
             )
         );
-
+        //return dd($rates);
         $ctx = stream_context_create ( $opts );
         $result = file_get_contents ( 'http://ec.europa.eu/taxation_customs/vies/services/checkVatService', false, $ctx );
 
@@ -148,7 +154,13 @@ class ApiController extends Controller
             foreach ( $keys as $key )
                 preg_match ( sprintf ( $pattern, $key ), $matches [2], $value ) && $response [$key] = $value [2];
         }
+        $url = "http://api.vatlookup.eu/rates/".$countryCode."/";
+
+        $vat_rate = json_decode(file_get_contents($url), true);
+        $response['vat_rate'] = $vat_rate['rates'][2]['rates'][0];
         return $response;
+
+
     }
 
 

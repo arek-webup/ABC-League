@@ -51,10 +51,7 @@ class MiscRepository
         return $xml->geoplugin_countryCode;
     }
 
-    public function test()
-    {
 
-    }
     public function getCurrency()
     {
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
