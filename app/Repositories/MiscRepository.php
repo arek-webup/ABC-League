@@ -13,6 +13,8 @@ class MiscRepository
         return $number + ($nearest - fmod($number, $nearest));
     }
 
+
+
     public function convertToPLN($price, $curr, $curr_sec){
         //$currency = USD / $currency = EUR itd...
         $req_url = 'https://api.exchangerate-api.com/v4/latest/'.$curr.'';

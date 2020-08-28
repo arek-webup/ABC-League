@@ -6,6 +6,7 @@ namespace App\Repositories;
 
 use App\Account;
 use App\Code;
+use Illuminate\Support\Facades\DB;
 
 class AccountsRepository
 {
