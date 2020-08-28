@@ -13,7 +13,8 @@ class AccountsRepository
 
     public function getAllAccounts()
     {
-        return Account::all();
+
+        return Account::withCount(['codes'])->get();
     }
 
     public function getAllAvailableAccounts()

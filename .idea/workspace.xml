@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55b35484-38d1-4fd3-93f3-b18abcceb981" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Account.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccountsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/AccountsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/AccountsRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +237,7 @@
       <workItem from="1598266904496" duration="2257000" />
       <workItem from="1598469610109" duration="2807000" />
       <workItem from="1598556108581" duration="47000" />
-      <workItem from="1598607634424" duration="2902000" />
+      <workItem from="1598607634424" duration="4068000" />
     </task>
     <task id="LOCAL-00034" summary="Hello świat">
       <created>1593195568158</created>
