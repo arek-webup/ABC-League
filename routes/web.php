@@ -64,6 +64,7 @@ Route::group([
 
     Route::get('/coupon', 'ApiController@coupons');
     Route::get('/test/{ip}', 'ApiController@test');
+    Route::get('/checkVat/{country}', 'ApiController@getVatRate');
     Route::get('/checkVat/{country}/{nip}', 'ApiController@viesCheckVAT');
 
     Route::get('/verify/{orderid}', 'PaymentController@verify');

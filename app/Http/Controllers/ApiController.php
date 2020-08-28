@@ -159,10 +159,14 @@ class ApiController extends Controller
         $vat_rate = json_decode(file_get_contents($url), true);
         $response['vat_rate'] = $vat_rate['rates'][2]['rates'][0];
         return $response;
-
-
     }
 
+    public function getVatRate($countryCode)
+    {
+        $url = "http://api.vatlookup.eu/rates/".$countryCode."/";
 
+        $vat_rate = json_decode(file_get_contents($url), true);
+        return $vat_rate['rates'][2]['rates'][0];
+    }
 
 }
