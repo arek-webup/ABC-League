@@ -55,6 +55,8 @@ Route::group([
     Route::get('/region/{id}', 'RegionsController@getregion');
     Route::get('/availableregions', 'RegionsController@available_regions');
 
+
+
     Route::get('/reviews', 'ReviewsController@reviews');
     Route::get('/reviewscookie', 'ReviewsController@reviewscookie');
     Route::get('/reviews/{cookie}', 'ReviewsController@reviewsbycookie');
@@ -63,9 +65,8 @@ Route::group([
 
 
     Route::get('/coupon', 'ApiController@coupons');
-    Route::get('/test/{ip}', 'ApiController@test');
-    Route::get('/checkVat/{country}', 'ApiController@getVatRate');
-    Route::get('/checkVat/{country}/{nip}', 'ApiController@viesCheckVAT');
+    Route::get('/checkVat/{country}', 'ApiController@checkVatRate');
+    Route::get('/checkVat/{country}/{nip}', 'ApiController@checkVat');
 
     Route::get('/verify/{orderid}', 'PaymentController@verify');
 
@@ -78,6 +79,11 @@ Route::group([
     Route::post('/pay_paypal', 'PaymentController@pay_paypal')->name('charge');
     Route::get('paymentsuccess', 'PaymentController@payment_success');
     Route::get('paymenterror', 'PaymentController@payment_error');
+
+    Route::post('/checkout/pay_paypal', 'PaymentController@checkout_paypal');
+    Route::post('/checkout/pay_stripe', 'PaymentController@checkout_stripe');
+
+
 });
 
 Auth::routes();

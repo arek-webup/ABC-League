@@ -24,8 +24,8 @@ class PayPalGateway
     {
         $this->gateway = Omnipay::create('PayPal_Rest');
         $this->mR = $mR;
-        $this->gateway->setClientId('AepWl7aJbpJ53rL1rNW_yKzhxrIcVbeVeF4xHbnctWMTuqlXJWQN5sHuIrB-_fmIzTmipErMlcpD_NIi');
-        $this->gateway->setSecret('EMuXz49NpoWuSH6j0-a82uUHUKdpTIDOklMmUKDN5kmT5N_GoxX5knYpi8QICLDIx2cxLiEHESWlHNML');
+        $this->gateway->setClientId('AbVK7Y_xycPRzS3YdrT7SURPMk2BudjiW9TClsTlN2W6PMknIu1bGgsqIc5WpPE09ouNq6Cwz7rRPYOt');
+        $this->gateway->setSecret('EP5S0goyINhyoRXTbs5WWDYVzP0_XmM6gC-RA4TZTIS9xFkY8RzJTxKVChdIO8mLDLzI4n06WFsn_c0O');
         //$this->gateway->setUsername('officeabcleague@gmail.com');
         $this->gateway->setTestMode(false); //set it to 'false' when go live
     }
