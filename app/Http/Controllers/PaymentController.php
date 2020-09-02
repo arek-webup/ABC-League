@@ -14,15 +14,13 @@ use Stripe\Stripe;
 class PaymentController extends Controller
 {
 
-    /**
-     * @var StripeGateway
-     */
+
     private $sG;
 
-    public function __construct(PaymentGateway $pG, StripeGateway $sG, PayPalGateway $ppG)
+    public function __construct(PaymentGateway $pG,  PayPalGateway $ppG)
     {
         $this->pG = $pG;
-        $this->sG = $sG;
+
         $this->ppG = $ppG;
     }
 
