@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Session;
 use Omnipay\Omnipay;
 use App\Gateway\PaymentGateway;
 use App\Gateway\PayPalGateway;
-use App\Gateway\StripeGateway;
+
 use Illuminate\Http\Request;
 use Stripe\Charge;
 use Stripe\Stripe;
