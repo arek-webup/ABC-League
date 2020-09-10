@@ -62,6 +62,11 @@ class ApiController extends Controller
         return response()->json($this->mR->getCountry());
     }
 
+    public function koszyk()
+    {
+        return response()->json('success');
+    }
+
     public function getIP()
     {
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){

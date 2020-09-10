@@ -65,6 +65,7 @@ Route::group([
 
 
     Route::get('/coupon', 'ApiController@coupons');
+    Route::get('/koszyk', 'ApiController@koszyk');
     Route::get('/checkVat/{country}', 'ApiController@checkVatRate');
     Route::get('/checkVat/{country}/{nip}', 'ApiController@checkVat');
 
