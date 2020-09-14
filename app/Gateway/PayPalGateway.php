@@ -61,9 +61,9 @@ class PayPalGateway
                     $code = Code::where('account_id', $accountId)->get()->take($payment->quantity);
                     if(empty($code[0]) || $avalible < $payment->quantity )
                     {
-                        return response()->json(['message' => 'Ups. Account is not avalible. Try other account or less quantity']);
+                        return response()->json(['status'=>'failed','message' => 'Ups. Account is not avalible. Try other account or less quantity']);
                     }else{
-                        return response()->json(['message' => $response->getRedirectUrl()]);
+                        return response()->json(['status'=>'success','message' => $response->getRedirectUrl()]);
                     }
 
                 } else {
