@@ -5,6 +5,7 @@ namespace App\Gateway;
 use App\Account;
 use App\Code;
 use App\Region;
+use App\Repositories\AccountsRepository;
 use App\Repositories\MiscRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -20,10 +21,11 @@ class PayPalGateway
      */
     private $mR;
 
-    public function __construct(PaymentGateway $pG, MiscRepository $mR)
+    public function __construct(PaymentGateway $pG, MiscRepository $mR, AccountsRepository $aR)
     {
         $this->gateway = Omnipay::create('PayPal_Rest');
         $this->mR = $mR;
+        $this->aR = $aR;
 //        $this->gateway->setClientId('AbVK7Y_xycPRzS3YdrT7SURPMk2BudjiW9TClsTlN2W6PMknIu1bGgsqIc5WpPE09ouNq6Cwz7rRPYOt');
 //        $this->gateway->setSecret('EP5S0goyINhyoRXTbs5WWDYVzP0_XmM6gC-RA4TZTIS9xFkY8RzJTxKVChdIO8mLDLzI4n06WFsn_c0O');
         $this->gateway->setClientId('AfqwvYCHb279PB7AbDWaiBsUiaXeSYsszykYDJyV71yYDFDcRNeXxQawqaV_kaUcKDS0pjngmJ_cVokH');
