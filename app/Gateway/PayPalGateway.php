@@ -53,7 +53,7 @@ class PayPalGateway
 
                 $regionid = Region::where('name',$payment->region_id)->get()[0]->id;
 
-                return $this->aR->checkAvaliblity($regionid,$payment->description,$payment->quantity);
+                $this->aR->checkAvaliblity($regionid,$payment->description,$payment->quantity);
 
                 if ($response->isRedirect()) {
 //                    return $response->redirect(); // this will automatically forward the customer

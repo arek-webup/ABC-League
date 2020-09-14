@@ -25,8 +25,6 @@ class AccountsRepository
         if(empty($code[0]) || $avalible < $quantity )
         {
             return response()->json(['message' => 'Ups. Account is not avalible. Try other account or less quantity']);
-        }else{
-            return response()->json(['message' => 'its okay']);
         }
     }
 
