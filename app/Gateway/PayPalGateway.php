@@ -56,8 +56,15 @@ class PayPalGateway
 
 
                 if ($response->isRedirect()) {
-                    $this->aR->checkAvaliblity($regionid,$payment->description,$payment->quantity);
-                    return $response->getRedirectUrl();
+                    $accountId = Account::where('region_id',$regionid)->where("name",$payment->description)->first()->id;
+                    $avalible = Code::where('account_id', $accountId)->count();
+                    $code = Code::where('account_id', $accountId)->get()->take($payment->quantity);
+                    if(empty($code[0]) || $avalible < $payment->quantity )
+                    {
+                        return response()->json(['message' => 'Ups. Account is not avalible. Try other account or less quantity']);
+                    }else{
+                        return response()->json(['message' => $response->getRedirectUrl()]);
+                    }
 
                 } else {
                     // not successful
