@@ -139,13 +139,12 @@
                             <bleevockquote class="epigraph">
                                 <div>
                                     <p>Dane do wysłania: email, currency, price, quantity, description</p>
-                                    <p>Dane powrotne: sam zobaczysz, jakby czegoś brakowało to wywali error code 500 albo empty </p>
+                                    <p>Dane powrotne: link do płatności paypal </p>
                                 </div></bleevockquote>
 
                             <p>POST /pay_stripe </p>
                             <blockquote class="epigraph">
                                 <div>
-                                    <p>Pobiera pieniądze z konta i informuje czy się udało (NIGDY NIE CALLUJ BEZ MOJEJ ZGODY BO JEST WERSJA LIVE (pobierze Ci hajs z konta))</p>
                                     <p>Dane do wysłania: price, name, currency, email, token <- token jest tworzony przez JS Stripe który sprawdza dane karty przed utworzeniem tokenu)</p>
                                     <p>Dane powrotne: success or failed </p>
                                 </div></blockquote>

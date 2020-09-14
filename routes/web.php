@@ -63,7 +63,7 @@ Route::group([
     Route::get('/reviewssum/{cookie}', 'ReviewsController@reviewssumbycookie');
     Route::get('/reviews/add/{tekst}/{author}/{stars}/{cookie}', 'ReviewsController@add_review');
 
-
+    Route::get('/testAc', 'AccountsController@testAc');
     Route::get('/coupon', 'ApiController@coupons');
     Route::get('/koszyk', 'ApiController@koszyk');
     Route::get('/checkVat/{country}', 'ApiController@checkVatRate');

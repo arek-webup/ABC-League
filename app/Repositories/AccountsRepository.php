@@ -6,6 +6,7 @@ namespace App\Repositories;
 
 use App\Account;
 use App\Code;
+use App\Region;
 use Illuminate\Support\Facades\DB;
 
 class AccountsRepository
@@ -14,6 +15,17 @@ class AccountsRepository
     public function getAllAccounts()
     {
         return Account::withCount(['codes'])->get();
+    }
+
+    public function checkAvaliblity($regionId, $description, $quantity)
+    {
+        $accountId = Account::where('region_id',$regionId)->where("name",$description)->first()->id;
+        $avalible = Code::where('account_id', $accountId)->count();
+        $code = Code::where('account_id', $accountId)->get()->take($quantity);
+        if(empty($code[0]) || $avalible < $quantity )
+        {
+            return response()->json(['message' => 'Ups. Account is not avalible. Try other account or less quantity']);
+        }
     }
 
     public function getAllAvailableAccounts()

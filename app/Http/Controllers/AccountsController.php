@@ -20,6 +20,7 @@ class AccountsController extends Controller
         return response()->json($this->aR->getAllAccounts());
     }
 
+
     public function account($id)
     {
         return $this->aR->getAccount($id);
