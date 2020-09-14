@@ -26,7 +26,6 @@ class PaymentController extends Controller
 
     public function pay_paypal(Request $request)
     {
-        RETURN null;
         $this->pG->setCurrency($request->currency);
         $this->pG->setPrice($request->price);
         $this->pG->setQuantity($request->quantity);
