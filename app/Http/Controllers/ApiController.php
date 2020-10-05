@@ -71,7 +71,7 @@ class ApiController extends Controller
 //        dd($data);
         foreach($data as $d)
         {
-            $totalPrice[] = $d->price;
+
             $totalQuantity[] = $d->selQuantity;
             $totalName[] = $d->name;
             $totalRegion[] = $d->region_id;
@@ -79,7 +79,7 @@ class ApiController extends Controller
 
         $this->pG->setEmail($request->email);
         $this->pG->setCurrency($request->currency);
-        $this->pG->setPrice(array_sum($totalPrice));
+        $this->pG->setPrice(array_sum($data->price_usd));
         $this->pG->setQuantity(array_sum($totalQuantity));
         $this->pG->setDescription(json_encode($totalName));
         $this->pG->setRegion($totalRegion);
