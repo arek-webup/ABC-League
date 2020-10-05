@@ -75,13 +75,14 @@ class ApiController extends Controller
             $totalName[] = $d->name;
             $totalRegion[] = $d->region_id;
         }
-        dd($data);
+
         $this->pG->setEmail($request->email);
         $this->pG->setCurrency($request->currency);
         $this->pG->setPrice(array_sum($totalPrice));
         $this->pG->setQuantity(array_sum($totalQuantity));
         $this->pG->setDescription(json_encode($totalName));
         $this->pG->setRegion($totalRegion);
+        return response()->json("success");
         return response()->json($this->ppG->charge($this->pG));
 
     }
