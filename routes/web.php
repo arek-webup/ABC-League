@@ -56,7 +56,6 @@ Route::group([
     Route::get('/availableregions', 'RegionsController@available_regions');
 
 
-
     Route::get('/reviews', 'ReviewsController@reviews');
     Route::get('/reviewscookie', 'ReviewsController@reviewscookie');
     Route::get('/reviews/{cookie}', 'ReviewsController@reviewsbycookie');
