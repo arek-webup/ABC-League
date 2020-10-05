@@ -105,6 +105,6 @@ class PaymentGateway
 
     public function getAll()
     {
-        return [$this->description, $this->currency, $this->email, $this->quantity];
+        return [$this->description, $this->currency, $this->email, $this->quantity, $this->region, $this->price];
     }
 }
