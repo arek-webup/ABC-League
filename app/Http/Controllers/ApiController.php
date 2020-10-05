@@ -82,7 +82,7 @@ class ApiController extends Controller
         $this->pG->setQuantity(array_sum($totalQuantity));
         $this->pG->setDescription(json_encode($totalName));
         $this->pG->setRegion($totalRegion);
-        return response()->json("success");
+        return "asd";
         return response()->json($this->ppG->charge($this->pG));
 
     }
