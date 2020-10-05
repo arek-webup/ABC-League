@@ -35,8 +35,10 @@ class ApiController extends Controller
      */
     private $gateway;
 
-    public function __construct(MiscRepository $mR, VatService $vatService)
+    public function __construct(MiscRepository $mR, VatService $vatService, PaymentGateway $pG, PayPalGateway $ppG)
     {
+        $this->ppG = $ppG;
+        $this->pG = $pG;
         $this->mR = $mR;
         $this->vatService = $vatService;
     }
@@ -62,12 +64,25 @@ class ApiController extends Controller
         return response()->json($this->mR->getCountry());
     }
 
-    public function koszyk()
+    public function koszyk(Request $request)
     {
-        $data = json_decode('[{"id":50,"region_id":1,"name":"Premium","description":"<p>Level 30 Account.</p><p>60 000+ Blue Essence.</p><p>Unranked League All Seasons.</p><p>Fresh MMR.</p><p>Unverified e-mail.</p><p>Ordinary nickname, no bans or reports.</p><p>30 days botting-ban warranty.</p><p>Premium support.</p><p>Instant delivery.</p>","price_usd":"14.99","small":10.99,"medium":9.99,"large":8.99,"created_at":null,"updated_at":"2020-08-09T09:29:33.000000Z","slug":"EUNE smurf 50k+","factory":0,"count":53,"selQuantity":8},{"id":47,"region_id":1,"name":"Standard","description":"<p>Level 30 Account.</p><p>50 000+ Blue Essence.</p><p>Unranked League All Seasons.</p><p>Fresh MMR.</p><p>Unverified e-mail.</p><p>Ordinary nickname, no bans or reports.</p><p>30 days botting-ban warranty.</p><p>Premium support.</p><p>Instant delivery.</p>","price_usd":"9.99","small":10.99,"medium":9.99,"large":8.99,"created_at":null,"updated_at":"2020-08-09T09:19:39.000000Z","slug":"EUW smurf 40k+","factory":0,"count":3,"selQuantity":2}]');
+        $data = $request->all();
+//        $data = json_decode('[{"currency":"PLN","region_id":1,"name":"Premium","description":"<p>Level 30 Account.</p><p>60 000+ Blue Essence.</p><p>Unranked League All Seasons.</p><p>Fresh MMR.</p><p>Unverified e-mail.</p><p>Ordinary nickname, no bans or reports.</p><p>30 days botting-ban warranty.</p><p>Premium support.</p><p>Instant delivery.</p>","price_usd":"14.99","small":10.99,"medium":9.99,"large":8.99,"created_at":null,"updated_at":"2020-08-09T09:29:33.000000Z","slug":"EUNE smurf 50k+","factory":0,"count":53,"selQuantity":8},{"currency":"PLN","region_id":1,"name":"Standard","description":"<p>Level 30 Account.</p><p>50 000+ Blue Essence.</p><p>Unranked League All Seasons.</p><p>Fresh MMR.</p><p>Unverified e-mail.</p><p>Ordinary nickname, no bans or reports.</p><p>30 days botting-ban warranty.</p><p>Premium support.</p><p>Instant delivery.</p>","price_usd":"9.99","small":10.99,"medium":9.99,"large":8.99,"created_at":null,"updated_at":"2020-08-09T09:19:39.000000Z","slug":"EUW smurf 40k+","factory":0,"count":3,"selQuantity":2}]');
+        foreach($data as $d)
+        {
+            $totalPrice[] = $d->price_usd;
+            $totalQuantity[] = $d->selQuantity;
+            $totalName[] = $d->name;
+            $totalRegion[] = $d->region_id;
+        }
+        dd($data);
+        $this->pG->setCurrency($data[0]->currency);
+        $this->pG->setPrice(array_sum($totalPrice));
+        $this->pG->setQuantity(array_sum($totalQuantity));
+        $this->pG->setDescription(json_encode($totalName));
+        $this->pG->setRegion($totalRegion);
+        return response()->json($this->ppG->charge($this->pG));
 
-        return dd($data);
-        return response()->json('success');
     }
 
     public function getIP()

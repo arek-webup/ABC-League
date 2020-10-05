@@ -45,12 +45,13 @@ class PayPalGateway
                     'cancelUrl' => url('paymenterror'),
                 ))->send();
                 $payment = new Order;
+//                dd($pG->getPrice()."".$pG->getCurrency()."".$pG->getDescription());
                 $payment->order_id = $response->getData()['id'];
                 $payment->region_id = $pG->getRegion();
                 $payment->description = $pG->getDescription();
                 $payment->quantity = $pG->getQuantity();
                 $payment->save();
-
+//
                 $regionid = Region::where('name',$payment->region_id)->get()[0]->id;
 
 
