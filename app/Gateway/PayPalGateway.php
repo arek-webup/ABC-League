@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Omnipay\Omnipay;
 use App\Order;
+
 class PayPalGateway
 {
 
@@ -38,8 +39,8 @@ class PayPalGateway
     {
             try {
                 $response = $this->gateway->purchase(array(
-                    'amount' => $pG->getPrice() * 1,
-                    'currency' => $pG->getCurrency(),
+                    'amount' => $this->mR->convertToPLN($pG->getPrice(),$pG->getCurrency(), 'PLN') * 1,
+                    'currency' => 'PLN',
                     'description' => $pG->getDescription(),
                     'returnUrl' => url('paymentsuccess'),
                     'cancelUrl' => url('paymenterror'),
@@ -96,8 +97,6 @@ class PayPalGateway
 
                 // Insert transaction data into the database
                 $lol = Order::where('order_id', $arr_body['id'])->first();
-
-
 
 
                     $payment = Order::where('order_id',$arr_body['id'])->first();
