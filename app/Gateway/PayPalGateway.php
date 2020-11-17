@@ -39,8 +39,8 @@ class PayPalGateway
     {
             try {
                 $response = $this->gateway->purchase(array(
-                    'amount' => $this->mR->convertToPLN($pG->getPrice(),$pG->getCurrency(), 'PLN') * 1,
-                    'currency' => 'PLN',
+                    'amount' => $pG->getPrice() * 1,
+                    'currency' => $pG->getCurrency(),
                     'description' => $pG->getDescription(),
                     'returnUrl' => url('paymentsuccess'),
                     'cancelUrl' => url('paymenterror'),
