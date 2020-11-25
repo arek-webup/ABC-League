@@ -8,6 +8,7 @@ use App\Region;
 use App\Repositories\AccountsRepository;
 use App\Repositories\MiscRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Omnipay\Omnipay;
 use App\Order;
@@ -105,23 +106,28 @@ class PayPalGateway
                     $acc = Account::where('region_id',$regionid)->where("name",$payment->description)->count();
                     $account_id = Account::where('region_id',$regionid)->where("name",$payment->description)->get()[0]->id;
                     $code = Code::where('account_id', $account_id)->get()->take($payment->quantity);
-
+                    $email = $arr_body['payer']['payer_info']['email'];
                     $payment->email = $arr_body['payer']['payer_info']['email'];
                     $payment->price = $arr_body['transactions'][0]['amount']['total'];
                     $payment->currency = $arr_body['transactions'][0]['amount']['currency'];
                     $payment->status = $arr_body['state'];
                     $payment->countrycode = $arr_body['payer']['payer_info']['country_code'];
                     $payment->payment = 'PayPal';
-
                     $payment->code = $code;
                     $payment->PLN = $this->mR->convertToPLN($arr_body['transactions'][0]['amount']['total'], $arr_body['transactions'][0]['amount']['currency'], 'PLN' );
-                    $payment->firstname = $arr_body['payer']['payer_info']['first_name'];
-                    $payment->lastname = $arr_body['payer']['payer_info']['last_name'];
-                    $payment->save();
+//                    $payment->firstname = $arr_body['payer']['payer_info']['first_name'];
+//                    $payment->lastname = $arr_body['payer']['payer_info']['last_name'];
+                    $payment->fullname = $arr_body['payer']['payer_info']['first_name']." ". $arr_body['payer']['payer_info']['last_name'];
+
 
                     Code::where('account_id', $account_id)->take($payment->quantity)->delete();
 
+                Mail::send( 'mail.index',['code' => $code, 'email' => $arr_body['payer']['payer_info']['email'], 'name' => $payment->description, 'order_id' => $arr_body['id']] ,function($message) use ($email) {
+                    $message->from ( 'office@accounts4life.com', 'Accounts4life' );
+                    $message->to($email, 'Tak')->subject('Thank you for purchase account(s)!');
+                });
 
+                $payment->save();
                 $url = 'https://accounts4life.com/payment/'.$arr_body['id'].'';
                 return redirect()->to($url)->send();
 //                return "Payment is successful. Your transaction id is: ". $arr_body['id'];

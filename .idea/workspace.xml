@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55b35484-38d1-4fd3-93f3-b18abcceb981" name="Default Changelist" comment="">
+    <list default="true" id="55b35484-38d1-4fd3-93f3-b18abcceb981" name="Default Changelist" comment="vat_rate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Gateway/PaymentGateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gateway/PaymentGateway.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Gateway/PayPalGateway.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gateway/PayPalGateway.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +168,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../stripe" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
@@ -257,28 +256,13 @@
       <workItem from="1600088670984" duration="4109000" />
       <workItem from="1600287277942" duration="1745000" />
       <workItem from="1601645422850" duration="2505000" />
-      <workItem from="1601907297483" duration="6249000" />
-    </task>
-    <task id="LOCAL-00075" summary="asd">
-      <created>1595533037514</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1595533037514</updated>
-    </task>
-    <task id="LOCAL-00076" summary="asd">
-      <created>1595534122559</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1595534122560</updated>
-    </task>
-    <task id="LOCAL-00077" summary="asd">
-      <created>1596723292768</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1596723292770</updated>
+      <workItem from="1601907297483" duration="8857000" />
+      <workItem from="1602245049126" duration="1206000" />
+      <workItem from="1605542718277" duration="2021000" />
+      <workItem from="1605624905021" duration="2086000" />
+      <workItem from="1605711622518" duration="1297000" />
+      <workItem from="1606218863823" duration="1810000" />
+      <workItem from="1606225202957" duration="1266000" />
     </task>
     <task id="LOCAL-00078" summary="test">
       <created>1597146765322</created>
@@ -602,7 +586,28 @@
       <option name="project" value="LOCAL" />
       <updated>1601921736638</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="vat_rate">
+      <created>1601922074989</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1601922074989</updated>
+    </task>
+    <task id="LOCAL-00125" summary="currency PLN">
+      <created>1605543476157</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1605543476157</updated>
+    </task>
+    <task id="LOCAL-00126" summary="revert currency changes">
+      <created>1605627428933</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1605627428934</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -623,30 +628,26 @@
     <MESSAGE value="asd" />
     <MESSAGE value="test" />
     <MESSAGE value="vat_rate" />
-    <option name="LAST_COMMIT_MESSAGE" value="vat_rate" />
+    <MESSAGE value="currency PLN" />
+    <MESSAGE value="revert currency changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="revert currency changes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594059136398">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1230" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606219034625">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594059136398" />
-    <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600067365659">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
+    <state x="-1230" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606219034625" />
     <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600067365659" />
-    <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594556422098" />
-    <state x="-1337" y="28" key="CommitChangelistDialog2" timestamp="1601921735845">
+    <state x="-1337" y="28" key="CommitChangelistDialog2" timestamp="1605627428167">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1337" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601921735845" />
-    <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601913593475" />
-    <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595350649728" />
-    <state x="-1180" y="278" key="FileChooserDialogImpl" timestamp="1600287283011">
+    <state x="-1337" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605627428167" />
+    <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605543474952" />
+    <state x="-1180" y="278" key="FileChooserDialogImpl" timestamp="1606218973140">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1180" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1600287283011" />
-    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600155504588" />
-    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594455434638" />
+    <state x="-1180" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606218973140" />
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601989645530" />
     <state x="712" y="354" key="NewPhpClassDialog" timestamp="1598629469800">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -659,25 +660,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="242" height="198" key="ShowFilterAction_Filter_Popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600075355035" />
-    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2" timestamp="1601921738078">
+    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605627435036">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601921738078" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601913595770" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595350661519" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1599143360315">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605627435036" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605543478683" />
+    <state x="-1252" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1605711624433">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1252" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605711624433" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599073115221" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599143360315" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1595529712670">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1595529712670" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600075360855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600075360855" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593529536443" />
   </component>
 </project>
