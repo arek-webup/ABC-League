@@ -638,11 +638,11 @@
     </state>
     <state x="-1230" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606219034625" />
     <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600067365659" />
-    <state x="-1337" y="28" key="CommitChangelistDialog2" timestamp="1605627428167">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="642" y="31" width="1278" height="984" key="CommitChangelistDialog2" timestamp="1606309365294">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1337" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605627428167" />
-    <state x="647" y="31" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605543474952" />
+    <state x="642" y="31" width="1278" height="984" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606309365294" />
     <state x="-1180" y="278" key="FileChooserDialogImpl" timestamp="1606218973140">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -660,11 +660,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="242" height="198" key="ShowFilterAction_Filter_Popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600075355035" />
-    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2" timestamp="1605627435036">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1606309367944">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605627435036" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605543478683" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606309367944" />
     <state x="-1252" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1605711624433">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
