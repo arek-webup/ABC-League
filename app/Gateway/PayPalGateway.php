@@ -115,9 +115,9 @@ class PayPalGateway
                     $payment->payment = 'PayPal';
                     $payment->code = $code;
                     $payment->PLN = $this->mR->convertToPLN($arr_body['transactions'][0]['amount']['total'], $arr_body['transactions'][0]['amount']['currency'], 'PLN' );
-//                    $payment->firstname = $arr_body['payer']['payer_info']['first_name'];
-//                    $payment->lastname = $arr_body['payer']['payer_info']['last_name'];
-                    $payment->fullname = $arr_body['payer']['payer_info']['first_name']." ". $arr_body['payer']['payer_info']['last_name'];
+                    $payment->firstname = $arr_body['payer']['payer_info']['first_name'];
+                    $payment->lastname = $arr_body['payer']['payer_info']['last_name'];
+//                    $payment->fullname = $arr_body['payer']['payer_info']['first_name']." ". $arr_body['payer']['payer_info']['last_name'];
 
 
                     Code::where('account_id', $account_id)->take($payment->quantity)->delete();
