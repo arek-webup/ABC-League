@@ -45,7 +45,7 @@ Route::group([
     Route::get('/reviewscookie/sum', 'ReviewsController@sum_reviewcookie');
 
     Route::get('/', 'HomeController@index');
-    Route::get('/asd', 'HomeController@stripe');
+    Route::post('/asd', 'HomeController@stripe');
     Route::get('/accounts', 'AccountsController@accounts');
     Route::get('/charge', 'ApiController@charge');
     Route::get('/accounts/{id}', 'AccountsController@acc');
