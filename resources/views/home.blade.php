@@ -66,7 +66,7 @@
                 </div>
                 <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                     <div itemprop="articleBody">
-                        <form method="POST" action="/stripe">
+                        <form method="POST" action="/asd">
                             <button type="submit">Manage billing</button>
                         </form>
 
