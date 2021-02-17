@@ -66,6 +66,10 @@
                 </div>
                 <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                     <div itemprop="articleBody">
+                        <form method="POST" action="/stripe">
+                            <button type="submit">Manage billing</button>
+                        </form>
+
                         <div class="section" id="preface-to-the-api-design-guide">
                             <h1>Metody GET - sprawy ogólne<a class="headerlink" href="#preface-to-the-api-design-guide" title="Permalink to this headline">¶</a></h1>
                             <p><strong>Konta</strong>.</p>

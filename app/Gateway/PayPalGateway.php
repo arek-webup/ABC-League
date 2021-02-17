@@ -39,13 +39,13 @@ class PayPalGateway
     public function charge(PaymentGateway $pG)
     {
             try {
-                $response = $this->gateway->purchase(array(
-                    'amount' => $pG->getPrice() * 1,
-                    'currency' => $pG->getCurrency(),
-                    'description' => $pG->getDescription(),
-                    'returnUrl' => url('paymentsuccess'),
-                    'cancelUrl' => url('paymenterror'),
-                ))->send();
+                    $response = $this->gateway->purchase(array(
+                        'amount' => $pG->getPrice() * 1,
+                        'currency' => $pG->getCurrency(),
+                        'description' => $pG->getDescription(),
+                        'returnUrl' => url('paymentsuccess'),
+                        'cancelUrl' => url('paymenterror'),
+                    ))->send();
                 $payment = new Order;
 //                dd($pG->getPrice()."".$pG->getCurrency()."".$pG->getDescription());
                 $payment->order_id = $response->getData()['id'];
